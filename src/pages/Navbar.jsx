@@ -61,12 +61,12 @@ export default function Navbar() {
 
       {/* Sidebar for Mobile (Sliding from Right) */}
       <div
-        className={`fixed top-0 right-0 h-full bg-gray-900 text-white w-64 transform ${
+        className={`fixed top-0 right-0 h-full bg-white text-gray-900 w-full transform ${
           isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
-        } transition-transform duration-300 ease-in-out z-50`} // Added z-50
+        } transition-transform duration-300 ease-in-out z-50`} 
       >
         <div className="flex justify-end p-4">
-          <button onClick={toggleSidebar} className="text-white">
+          <button onClick={toggleSidebar} className="text-black">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -89,7 +89,7 @@ export default function Navbar() {
               <Link
                 key={index}
                 to={`/${items.item.toLowerCase()}`}
-                className="hover:bg-gray-700 p-2 rounded"
+                className="hover:bg-rose-200 p-2 font-semibold font-sora rounded"
                 onClick={toggleSidebar}
               >
                 {items.item}

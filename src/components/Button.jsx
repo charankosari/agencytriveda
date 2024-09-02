@@ -4,8 +4,7 @@ function Button({ label}) {
   return (
     <button
  
-     className="bg-violet-500 px-3 py-2 ml-4  rounded-full font-inter text-white"
-    
+     className="bg-rose-400 px-3 py-2 ml-4 text-sm md:text-lg rounded-md font-inter text-white"
     >
       {label}
     </button>

@@ -6,10 +6,10 @@ import Sidepic from '../assets/images/sidepic.jpg'
 export default function Home() {
   return (
     <div className='px-customPaddingMobile md:px-customPadding '>
-      <div className='flex flex-col md:flex-row  '>
+      <div className='flex flex-col space-y-10  md:flex-row  '>
         <div>
           <div className='flex flex-col space-y-2 mt-12 md:mt-28 px-customPaddingMobile items-start justify-center'>
-            <h1 className='font-sora text-violet-500 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-topToBottom'>
+            <h1 className='font-sora text-rose-500 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-topToBottom'>
               Triveda
             </h1>
             <h1 className='font-inter text-gray-900 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl animate-topToBottom'>
@@ -28,7 +28,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=''>
+        <div className='flex items-end justify-center'>
           <img src={Sidepic} width={800} height={800}></img>
         </div>
       </div>
