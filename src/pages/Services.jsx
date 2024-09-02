@@ -7,7 +7,7 @@ export default function Services() {
       <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8'>
        Services We Offer
       </h1>
-     
+      
     </div>
   );
 }

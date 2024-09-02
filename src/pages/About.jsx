@@ -8,7 +8,7 @@ export default function About() {
         Discover Who We Are
       </h1>
       <div className='flex flex-col md:flex-row items-center justify-center w-full max-w-screen-lg mx-auto fadeIn'>
-        <div className='w-full md:w-1/2 lg:pr-8 mb-8 md:mb-0'>
+        <div className='w-full  md:w-1/2 lg:pr-8 mb-8 md:mb-0'>
           <p className='mb-4 text-center md:text-left'>
             At Triveda, we are more than just an agency; we are the embodiment of a grand vision. Established by Vallabhaneni Lakshmi Suresh Chandra, Kosari Shiva Charan, and Miriyala Rakesh Krishna, our mission is to deliver unparalleled excellence in web development, app development, design, and marketing. Our journey began with a shared passion for innovation and a commitment to exceptional quality.
           </p>
