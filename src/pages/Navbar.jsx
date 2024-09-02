@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="px-customPaddingMobile md:px-customPadding py-2 ">
+      <nav className="px-customPaddingMobile md:px-customPadding py-2">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <div>
@@ -31,7 +31,7 @@ export default function Navbar() {
             </Link>
           </div>
           {/* Mobile Menu Icon */}
-          <div className="flex cursor-pointer md:hidden " onClick={toggleSidebar}>
+          <div className="flex cursor-pointer md:hidden" onClick={toggleSidebar}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -63,7 +63,7 @@ export default function Navbar() {
       <div
         className={`fixed top-0 right-0 h-full bg-gray-900 text-white w-64 transform ${
           isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
-        } transition-transform duration-300 ease-in-out`}
+        } transition-transform duration-300 ease-in-out z-50`} // Added z-50
       >
         <div className="flex justify-end p-4">
           <button onClick={toggleSidebar} className="text-white">
