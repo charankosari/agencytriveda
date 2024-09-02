@@ -1,14 +1,15 @@
 import React from 'react';
 import Button from '../components/Button';
 import Sidepic from '../assets/images/sidepic.jpg'
+import About from './About';
 
 
 export default function Home() {
   return (
-    <div className='px-customPaddingMobile md:px-customPadding '>
-      <div className='flex flex-col space-y-10  md:flex-row  '>
+    <div className='px-customPaddingMobile  md:px-customPadding  '>
+      <div className='flex flex-col  space-y-10  md:flex-row  '>
         <div>
-          <div className='flex flex-col space-y-2 mt-12 md:mt-28 px-customPaddingMobile items-start justify-center'>
+          <div className='flex flex-col space-y-2 mt-12 md:mt-48 px-customPaddingMobile items-start justify-center'>
             <h1 className='font-sora text-rose-500 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-topToBottom'>
               Triveda
             </h1>
@@ -31,8 +32,9 @@ export default function Home() {
         <div className='flex items-end justify-center'>
           <img src={Sidepic} width={800} height={800}></img>
         </div>
+     
       </div>
-
+      <About/>
     </div>
 
   );
