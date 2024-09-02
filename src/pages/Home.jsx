@@ -7,7 +7,7 @@ import Services from './Services';
 
 export default function Home() {
   return (
-    <div className='px-customPaddingMobile bg-gray-900 text-white md:px-customPadding  '>
+    <div className='px-customPaddingMobile bg-gray-950 text-white md:px-customPadding  '>
       <div className='flex flex-col  space-y-10  md:flex-row  '>
         <div>
           <div className='flex flex-col space-y-2 mt-12 md:mt-48 px-customPaddingMobile items-start justify-center'>
