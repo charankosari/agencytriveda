@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../components/Button';
 import Sidepic from '../assets/images/sidepic.jpg'
 import About from './About';
+import Services from './Services';
 
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
      
       </div>
       <About/>
+      <Services/>
     </div>
 
   );
