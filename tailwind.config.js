@@ -32,8 +32,8 @@ export default {
           '100%': { opacity: 1 },
         },
         scroll: {
-          '100%': { transform: 'translateX(0)' },
-          '0%': { transform: 'translateX(-50%)' },
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },  // Move by 50% to cover half of the total width since we're duplicating
         },
       
       },

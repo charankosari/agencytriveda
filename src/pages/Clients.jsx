@@ -1,27 +1,41 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import { Autoplay } from 'swiper/modules';
 
 const Clients = () => {
     const clients = [
-        "Google", "Tesla", "Nvidia", "Apple", 
+        "Google", "Tesla", "Nvidia", "Apple", "Microsoft", "Amazon", "Facebook", "IBM", "Intel", "Adobe"
     ];
 
     return (
-        <div className="relative overflow-hidden bg-gray-950 py-4 mt-12">
-            <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8'>
+        <div className="bg-gray-950 py-4 mt-12">
+            <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8 text-white'>
                 Our Clients
             </h1>
-            <div className="absolute inset-0 left-0 right-auto bg-gradient-to-r from-gray-950 to-transparent opacity-40 pointer-events-none"></div>
-            <div className="absolute inset-0 right-0 left-auto bg-gradient-to-l from-gray-950 to-transparent opacity-40 pointer-events-none"></div>
-
-            <div className="relative flex items-center mt-12">
-                <div className="flex space-x-8 animate-scroll">
-                    {clients.concat(clients).map((client, index) => (
-                        <div key={index} className="text-rose-400 font-semibold text-lg whitespace-nowrap">
-                            {client}
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <Swiper
+                spaceBetween={30}
+                slidesPerView={1}
+                loop={true}
+                autoplay={{
+                    delay: 0,
+                    disableOnInteraction: false,
+                }}
+                speed={3000}
+                modules={[Autoplay]}
+                breakpoints={{
+                    1024: { slidesPerView: 5 },
+                    600: { slidesPerView: 3 },
+                    480: { slidesPerView: 2 },
+                }}
+            >
+                {clients.map((client, index) => (
+                    <SwiperSlide key={index} className="text-rose-400 font-semibold text-lg text-center">
+                        {client}
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </div>
     );
 };
