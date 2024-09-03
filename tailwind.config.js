@@ -31,10 +31,15 @@ export default {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 },
         },
+        scroll: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
         topToBottom: 'topToBottom 1s ease-out forwards',
         fadeIn: 'fadeIn 1s ease-out forwards',
+        scroll: 'scroll 10s linear infinite',
       },
     },
   },

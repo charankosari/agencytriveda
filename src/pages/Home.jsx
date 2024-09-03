@@ -8,6 +8,7 @@ import Testimonils from './Testimonils';
 import FAQSection from './FAQ';
 import ContactUs from './Contactus';
 import Footer from './Footer';
+import Clients from './Clients';
 
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
      
       </div>
       <About/>
+      <Clients/>
       <Services/>
       <WorkProof/>
       <Testimonils/>
