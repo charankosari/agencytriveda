@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const navbarItems = [
   { item: "Jobs" },
-  { item: "Services" },
+
   { item: "Contact" },
 ];
 
