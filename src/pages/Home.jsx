@@ -15,8 +15,8 @@ import Logo from '../assets/images/logo.png';
 export default function Home() {
   return (
     <div className='px-customPaddingMobile bg-gray-950 text-white md:px-customPadding  '>
-      <div className='flex flex-col space-y-10  md:flex-row  font-sora  '>
-        <div className='mb-10'>
+      <div className='flex flex-col   md:flex-row  font-sora  '>
+        <div className='lg:mb-10'>
           <div className='flex flex-col space-y-2 mt-12  md:mt-48 px-customPaddingMobile items-start justify-center'>
             <h1 className='font-sora text-textPrimary font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-topToBottom'>
               Triveda
