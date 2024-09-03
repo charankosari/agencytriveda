@@ -3,7 +3,6 @@ import Logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 
 const navbarItems = [
-  { item: "About" },
   { item: "Jobs" },
   { item: "Services" },
   { item: "Contact" },

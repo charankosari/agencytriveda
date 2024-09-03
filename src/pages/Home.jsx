@@ -9,6 +9,7 @@ import FAQSection from './FAQ';
 import ContactUs from './Contactus';
 import Footer from './Footer';
 import Clients from './Clients';
+import Logo from '../assets/images/logo.png';
 
 
 export default function Home() {
@@ -37,7 +38,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex items-end justify-center'>
-          <img src={Sidepic} width={800} height={800}></img>
+          <img src={Logo} width={800} height={800}></img>
         </div>
      
       </div>
