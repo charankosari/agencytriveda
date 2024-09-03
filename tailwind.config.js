@@ -14,6 +14,13 @@ export default {
         'inter': ['Inter', 'sans-serif'], 
         'sora': ['Sora', 'sans-serif'], 
       },
+      colors: {
+        'main': '#1D4ED8', 
+        'accent': '#F59E0B', 
+        'background': '#F3F4F6', 
+        'textPrimary': '#dc2626', 
+        'textSecondary': '#6B7280', 
+      },
       keyframes: {
         topToBottom: {
           '0%': { transform: 'translateY(-100%)', opacity: 0 },
