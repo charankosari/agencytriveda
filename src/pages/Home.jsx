@@ -5,6 +5,7 @@ import About from './About';
 import Services from './Services';
 import WorkProof from './WorkProof';
 import Testimonils from './Testimonils';
+import FAQSection from './FAQ';
 
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
       <Services/>
       <WorkProof/>
       <Testimonils/>
+      <FAQSection/>
     </div>
 
   );
