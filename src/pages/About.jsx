@@ -16,8 +16,8 @@ export default function About() {
             At Triveda, we believe in transforming ideas into reality and empowering businesses to thrive in the digital world. Our team is propelled by creativity, expertise, and a customer-centric approach, ensuring that each project we undertake becomes a success story. We invite you to join us on this exciting journey as we reshape the digital landscape together.
           </p>
         </div>
-        <div className='flex justify-center md:justify-end md:w-1/2 shadow-md'>
-          <img className='rounded-md w-full h-auto max-w-[500px]' src={Three} alt="Triveda Team" />
+        <div className='flex justify-center md:justify-end md:w-1/2'>
+          <img className='rounded-md w-full h-auto max-w-full md:max-w-[400px] lg:max-w-[500px] shadow-md' src={Three} alt="Triveda Team" />
         </div>
       </div>
     </div>
