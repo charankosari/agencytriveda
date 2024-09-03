@@ -44,7 +44,7 @@ export default {
       animation: {
         topToBottom: 'topToBottom 1s ease-out forwards',
         fadeIn: 'fadeIn 1s ease-out forwards',
-        scroll: 'scroll 5s linear infinite',
+        scroll: 'scroll 20s linear infinite',
       },
 
 
