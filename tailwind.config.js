@@ -33,7 +33,7 @@ export default {
         },
         scroll: {
           '100%': { transform: 'translateX(0)' },
-          '0%': { transform: 'translateX(-30%)' },
+          '0%': { transform: 'translateX(-50%)' },
         },
       
       },
@@ -44,7 +44,7 @@ export default {
       animation: {
         topToBottom: 'topToBottom 1s ease-out forwards',
         fadeIn: 'fadeIn 1s ease-out forwards',
-        scroll: 'scroll 30s linear infinite',
+        scroll: 'scroll 5s linear infinite',
       },
 
 

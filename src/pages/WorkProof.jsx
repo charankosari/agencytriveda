@@ -16,9 +16,9 @@ export default function WorkProof() {
         Explore What We Do.
       </h1>
 
-      <div className='w-full flex flex-wrap justify-between space-y-4 md:space-y-0 md:space-x-4 py-4'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-4'>
         {services.map((service, index) => (
-          <div key={index} className='w-full md:w-1/3 lg:w-1/4 bg-slate-900 shadow-md  overflow-hidden'>
+          <div key={index} className='bg-slate-900 shadow-md overflow-hidden'>
             <img src={service.img} alt={service.name} className='w-full h-80 object-cover' />
             <div className='p-4 flex flex-col items-center text-center'>
               <h2 className='font-bold text-lg font-sora'>{service.name}</h2>

@@ -3,7 +3,7 @@ import Home from './pages/Home'
 import Navbar from './pages/Navbar'
 import Jobs from './pages/Jobs'
 import Services from './pages/Services'
-import ContactUs from './pages/Contactus'
+import Contact from './pages/Contact'
 function App() {
  
 
@@ -15,7 +15,7 @@ function App() {
   <Route path='/' element={<Home/>}></Route>
   <Route path='/jobs' element={<Jobs/>}></Route>
   <Route path='/services' element={<Services/>}></Route>
-  <Route path='/contact' element={<ContactUs/>}></Route>
+  <Route path='/contact' element={<Contact/>}></Route>
  </Routes>
   </BrowserRouter>
   </>

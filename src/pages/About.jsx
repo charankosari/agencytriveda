@@ -3,13 +3,13 @@ import Three from '../assets/images/three.jpg';
 
 export default function About() {
   return (
-    <div className='flex flex-col items-center justify-between  px-4 md:px-8 lg:px-0 lg:w-full'>
-      <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8'>
+    <div className='flex flex-col items-center justify-between px-4 md:px-8 lg:px-0 lg:w-full'>
+      <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-16'>
         Discover Who We Are
       </h1>
-      <div className='flex flex-col md:flex-row w-[99%] lg:w-[98%] space-y-8 md:space-y-0 md:space-x-8'>
-        <div className='flex flex-col items-center md:items-start space-y-5 justify-center md:w-1/2 text-gray-300 font-sora'>
-          <p className='text-center md:text-left leading-relaxed'>
+      <div className='flex flex-col md:flex-row w-full md:space-x-8 space-y-8 md:space-y-0'>
+        <div className='flex flex-col items-center md:items-start text-gray-300 font-sora md:w-1/2'>
+          <p className='text-center md:text-left leading-relaxed mb-4'>
             Triveda is more than an agency; it represents the inception of a grand vision. Founded by Vallabhaneni Lakshmi Suresh Chandra, Kosari Shiva Charan, and Miriyala Rakesh Krishna, we are dedicated to delivering exceptional services in web development, app development, design, and marketing. Our journey commenced with a shared passion for innovation and an unwavering commitment to excellence.
           </p>
           <p className='text-center md:text-left leading-relaxed'>
@@ -17,7 +17,7 @@ export default function About() {
           </p>
         </div>
         <div className='flex justify-center md:justify-end md:w-1/2'>
-          <img className='rounded-md w-full h-auto max-w-full md:max-w-[400px] lg:max-w-[500px] shadow-md' src={Three} alt="Triveda Team" />
+          <img className='rounded-md w-full h-auto max-w-full max-h-[400px] object-cover shadow-md' src={Three} alt="Triveda Team" />
         </div>
       </div>
     </div>
