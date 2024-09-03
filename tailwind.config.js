@@ -20,6 +20,7 @@ export default {
         'background': '#F3F4F6', 
         'textPrimary': '#dc2626', 
         'textSecondary': '#6B7280', 
+        'buttonColor': '#f8fafc', 
       },
       keyframes: {
         topToBottom: {
