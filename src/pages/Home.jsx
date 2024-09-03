@@ -6,6 +6,7 @@ import Services from './Services';
 import WorkProof from './WorkProof';
 import Testimonils from './Testimonils';
 import FAQSection from './FAQ';
+import ContactUs from './Contactus';
 
 
 export default function Home() {
@@ -43,6 +44,7 @@ export default function Home() {
       <WorkProof/>
       <Testimonils/>
       <FAQSection/>
+      <ContactUs/>
     </div>
 
   );
