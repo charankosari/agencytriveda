@@ -4,6 +4,7 @@ import Sidepic from '../assets/images/sidepic.jpg'
 import About from './About';
 import Services from './Services';
 import WorkProof from './WorkProof';
+import Testimonils from './Testimonils';
 
 
 export default function Home() {
@@ -39,6 +40,7 @@ export default function Home() {
       <About/>
       <Services/>
       <WorkProof/>
+      <Testimonils/>
     </div>
 
   );
