@@ -14,13 +14,13 @@ import Clients from './Clients';
 export default function Home() {
   return (
     <div className='px-customPaddingMobile bg-gray-950 text-white md:px-customPadding  '>
-      <div className='flex flex-col space-y-10  md:flex-row   '>
+      <div className='flex flex-col space-y-10  md:flex-row  font-sora  '>
         <div className='mb-10'>
           <div className='flex flex-col space-y-2 mt-12  md:mt-48 px-customPaddingMobile items-start justify-center'>
             <h1 className='font-sora text-textPrimary font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-topToBottom'>
               Triveda
             </h1>
-            <h1 className='font-inter text-gray-50 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl animate-topToBottom'>
+            <h1 className=' text-gray-50 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl animate-topToBottom'>
               Crafting Custom Solutions from Vision to Victory
             </h1>
             <p className='text-gray-50  text-sm sm:text-lg md:text-xl lg:text-xl animate-topToBottom '>

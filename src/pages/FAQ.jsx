@@ -25,15 +25,15 @@ const FAQSection = () => {
   };
 
   return (
-    <div className='px-4 md:px-8 lg:px-12 mt-12'>
+    <div className='px-4 md:px-8 lg:px-12 mt-12 font-sora'>
       <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-8 text-gray-100'>
         Frequently Asked Questions
       </h1>
-      <section className="bg-gray-900 rounded-lg shadow-md font-sora">
+      <section className="bg-gray-900 rounded-sm shadow-md font-sora">
         <div className="w-full px-6 py-8 mx-auto">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-50 overflow-hidden">
+              <div key={index} className="rounded-sm shadow-sm border border-gray-700 overflow-hidden">
                 <button
                   onClick={() => handleToggle(index)}
                   className="w-full px-6 py-4 text-left text-sm md:text-md lg:text-lg font-medium text-gray-100 bg-gray-900  focus:outline-none rounded-t-lg transition-all duration-300 ease-in-out "
@@ -49,7 +49,7 @@ const FAQSection = () => {
                 </button>
                 {openIndex === index && (
                   <div className="px-6 py-4 border-t border-gray-200">
-                    <p className="text-gray-600 text-sm md:text-md lg:text-lg ">
+                    <p className="text-gray-200 text-sm md:text-md lg:text-lg ">
                       {faq.answer}
                     </p>
                   </div>
