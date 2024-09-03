@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Button({ label}) {
+function Button({ label, bgColor }) {
   return (
     <button
- 
-     className="bg-buttonColor px-3 py-2 ml-4 text-[12px] md:text-[16px] md:px-4 md:py-2 rounded-full font-inter text-slate-900"
+      type="button"
+      className={`py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 ${bgColor} dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700`}
     >
       {label}
     </button>

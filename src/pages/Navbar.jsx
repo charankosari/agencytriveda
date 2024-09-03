@@ -114,4 +114,3 @@ const RemoveIcon = () => {
   </svg>
   );
 };
-

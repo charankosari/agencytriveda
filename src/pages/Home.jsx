@@ -27,12 +27,12 @@ export default function Home() {
               Triveda turns your vision into reality with custom solutions. From concept to launch, we have the expertise to deliver tailored digital experiences that stand out.
             </p>
           </div>
-          <div className='flex flex-row mt-6  '>
-            <div className=' animate-topToBottom ' >
+          <div className='flex flex-row mt-6 ml-3 '>
+            <div className=' animate-topToBottom  ' >
               <Button label="See our Work" />
             </div>
             <div className='animate-topToBottom ' >
-              <Button label="Contact us" />
+              <Button label="Contact us"  />
             </div>
           </div>
         </div>
