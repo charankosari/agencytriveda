@@ -32,7 +32,7 @@ export default function Home() {
           </div>
           <div className='flex flex-row mt-6 ml-3 '>
             <div className=' animate-topToBottom  ' >
-              <Button label="See our Work" />
+             <Link to='/portfolio'><Button label="See our Work" /> </Link> 
             </div>
             <div className='animate-topToBottom ' >
              <Link to='/contact'> <Button label="Contact us"  /></Link>

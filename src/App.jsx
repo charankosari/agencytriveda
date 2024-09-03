@@ -4,6 +4,7 @@ import Navbar from './pages/Navbar'
 import Jobs from './pages/Jobs'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
+import Porfolio from './pages/Portolio'
 function App() {
  
 
@@ -16,6 +17,7 @@ function App() {
   <Route path='/jobs' element={<Jobs/>}></Route>
   <Route path='/services' element={<Services/>}></Route>
   <Route path='/contact' element={<Contact/>}></Route>
+  <Route path='/portfolio' element={<Porfolio/>}></Route>
  </Routes>
   </BrowserRouter>
   </>

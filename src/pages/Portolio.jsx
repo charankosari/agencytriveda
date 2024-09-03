@@ -1,0 +1,37 @@
+
+import React from 'react';
+import p1 from '../assets/images/p1.png';
+import p2 from '../assets/images/p2.png';
+import p3 from '../assets/images/p3.png';
+
+export default function Porfolio() {
+  const services = [
+    { name: "Shop rags", description: "Custom websites and web applications.", img: p1 },
+    { name: "Atharva", description: "Mobile apps for iOS and Android.", img: p2 },
+    { name: "Portfolio", description: "Strategies to boost your online presence.", img: p3 },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white font-sora">
+      <div className="container mx-auto px-6 py-12">
+        <h1 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl mb-12">
+          Porfolio
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105"
+            >
+              <img src={service.img} alt={service.name} className="w-full h-64 object-cover" />
+              <div className="p-6 text-center">
+                <h2 className="font-bold text-2xl mb-2">{service.name}</h2>
+                <p className="text-gray-700">{service.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
