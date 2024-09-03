@@ -11,7 +11,8 @@ export default function WorkProof() {
   ];
 
   return (
-    <div className='flex flex-col items-center justify-center mt-16 px-4 md:px-8 text-white'>
+
+     <div   className='flex flex-col items-center justify-center mt-16 px-4 md:px-8 text-white'>
       <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8'>
         Explore What We Do.
       </h1>
@@ -28,5 +29,6 @@ export default function WorkProof() {
         ))}
       </div>
     </div>
+
   );
 }

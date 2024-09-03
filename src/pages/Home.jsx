@@ -10,9 +10,11 @@ import ContactUs from './Contactus';
 import Footer from './Footer';
 import Clients from './Clients';
 import Logo from '../assets/images/logo.png';
+import { Link } from 'react-router-dom';
 
 
 export default function Home() {
+
   return (
     <div className='px-customPaddingMobile bg-gray-950 text-white md:px-customPadding  '>
       <div className='flex flex-col lg:mb-36  md:flex-row  font-sora  '>
@@ -33,7 +35,7 @@ export default function Home() {
               <Button label="See our Work" />
             </div>
             <div className='animate-topToBottom ' >
-              <Button label="Contact us"  />
+             <Link to='/contact'> <Button label="Contact us"  /></Link>
             </div>
           </div>
         </div>
