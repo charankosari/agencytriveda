@@ -32,15 +32,22 @@ export default {
           '100%': { opacity: 1 },
         },
         scroll: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+          '0%': { transform: 'translateX(-30%)' },
         },
+      
+      },
+      backgroundImage: {
+        'gradient-to-r': 'linear-gradient(to right, rgba(0,0,0,0.5), transparent)',
+        'gradient-to-l': 'linear-gradient(to left, rgba(0,0,0,0.5), transparent)',
       },
       animation: {
         topToBottom: 'topToBottom 1s ease-out forwards',
         fadeIn: 'fadeIn 1s ease-out forwards',
-        scroll: 'scroll 10s linear infinite',
+        scroll: 'scroll 30s linear infinite',
       },
+
+
     },
   },
   plugins: [],
