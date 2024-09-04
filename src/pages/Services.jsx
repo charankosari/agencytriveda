@@ -24,7 +24,7 @@ export default function Services() {
 
       </div>
       <div className='flex items-center justify-between  w-full font-sora mt-4'>
-        <h4 className='font-semibold w-40 md:w-full'>Have an idea? Let’s make it happen!</h4>
+        <h4 className='font-semibold w-40 md:w-80'>Have an idea? Let’s make it happen!</h4>
         <Link to='/contact'>
           <Button label="Contact us" />
         </Link>
