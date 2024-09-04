@@ -1,15 +1,23 @@
+import { Link } from 'react-router-dom';
 import Logo from '../assets/images/logo.png';
 import React from 'react';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-950 text-white border-t border-gray-700 py-8 font-sora">
+
       <div className="max-w-screen-xl mx-auto px-4">
+      <div className='flex flex-col items-start justify-center'>
+            <h2 className='font-bold text-xl md:text-2xl lg:text-4xl opacity-50 '> Excited?</h2>
+            <div className='hover:text-textPrimary flex flex-row space-x-3 items-center justify-center'><Link to='/contact'><h1 className='font-bold text-2xl md:text-4xl lg:text-6xl'>Let’s Work Together!</h1></Link>
+              <PlusIcon /></div>
+          </div>
         <div className="flex flex-col lg:flex-row justify-between items-start space-y-8 lg:space-y-0 lg:space-x-12">
           {/* Company Info */}
+         
           <div className="flex flex-col items-start text-left lg:text-left">
             <img src={Logo} alt="Triveda Logo" className="w-40 h-40 lg:w-60 lg:h-60 mb-2" />
-          
+
             <p className="text-gray-400">
               We specialize in crafting exceptional websites and web applications. Let us help you achieve your digital goals!
             </p>
@@ -43,3 +51,16 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+const PlusIcon = () => {
+  return (
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"  class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+  </svg>
+  
+  );
+
+};

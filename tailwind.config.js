@@ -29,7 +29,7 @@ export default {
         },
         fadeIn: {
           '0%': { opacity: 0 },
-          '100%': { opacity: 1 },
+          '100%': { opacity: 5 },
         },
         scroll: {
           '0%': { transform: 'translateX(0)' },

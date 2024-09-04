@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../components/Button';
+import { Link } from 'react-router-dom';
 
 export default function Services() {
   const services = [
@@ -20,7 +21,17 @@ export default function Services() {
             <h2 className='font-bold text-lg font-sora'>{item.name}</h2>
           </div>
         ))}
+
       </div>
+      <div className='flex items-center justify-between  w-full font-sora mt-4'>
+        <h4 className='font-semibold w-40 md:w-full'>Have an idea? Let’s make it happen!</h4>
+        <Link to='/contact'>
+          <Button label="Contact us" />
+        </Link>
+       
+      </div>
+
+
     </div>
   );
 }

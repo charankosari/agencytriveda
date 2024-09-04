@@ -12,16 +12,17 @@ export default function Porfolio() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white font-sora">
+    <div className="min-h-screen bg-gradient-to-b from-gray-950 to-gray-900 text-white font-sora ">
       <div className="container mx-auto px-6 py-12">
-        <h1 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl mb-12">
+        <h1 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl mb-4 text-textPrimary animate-fadeIn">
           Porfolio
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <p className='text-center mb-8 animate-fadeIn'>At Triveda, we are committed to crafting digital excellence, where our work truly speaks for itself."</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105"
+              className="bg-white cursor-pointer text-gray-800 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105"
             >
               <img src={service.img} alt={service.name} className="w-full h-64 object-cover" />
               <div className="p-6 text-center">
