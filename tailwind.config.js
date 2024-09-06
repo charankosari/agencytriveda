@@ -31,9 +31,14 @@ export default {
           '0%': { opacity: 0 },
           '100%': { opacity: 5 },
         },
+        float: {
+          '0%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-15px)' },
+          '100%': { transform: 'translateY(0px)' },
+        },
         scroll: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },  // Move by 50% to cover half of the total width since we're duplicating
+          '100%': { transform: 'translateX(-50%)' },  
         },
       
       },
@@ -45,6 +50,7 @@ export default {
         topToBottom: 'topToBottom 1s ease-out forwards',
         fadeIn: 'fadeIn 1s ease-out forwards',
         scroll: 'scroll 20s linear infinite',
+        float: 'float 5s ease-in-out infinite',
       },
 
 

@@ -43,9 +43,10 @@ export default function Home() {
   <img 
     src={Logo} 
     alt="Logo" 
-    className="w-[350px] md:w-[500px] lg:w-full" 
+    className="w-[350px] md:w-[500px] lg:w-full animate-float" 
   />
 </div>
+
 
      
       </div>
