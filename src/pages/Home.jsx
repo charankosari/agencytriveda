@@ -40,8 +40,13 @@ export default function Home() {
           </div>
         </div>
         <div className='flex items-end justify-center'>
-          <img src={Logo} width={800} height={800}></img>
-        </div>
+  <img 
+    src={Logo} 
+    alt="Logo" 
+    className="w-[350px] md:w-[500px] lg:w-full" 
+  />
+</div>
+
      
       </div>
       <About/>
