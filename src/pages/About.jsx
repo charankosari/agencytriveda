@@ -4,7 +4,7 @@ import Three from '../assets/images/three.jpg';
 export default function About() {
   return (
     <div className='flex flex-col items-center justify-between px-4 md:px-8 lg:px-0 lg:w-full'>
-      <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-16'>
+      <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-6 md:mb-12'>
         Discover Who We Are
       </h1>
       <div className='flex flex-col md:flex-row w-full md:space-x-8 space-y-8 md:space-y-0'>
