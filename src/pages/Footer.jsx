@@ -37,8 +37,8 @@ const Footer = () => {
           {/* Contact Info */}
           <div className="flex flex-col items-start">
             <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
-            <p className="text-gray-400">Email: <a href="mailto:contact@triveda.com" className="hover:text-white">contact@triveda.com</a></p>
-            <p className="text-gray-400">Phone: <a href="tel:+1234567890" className="hover:text-white">67847697843789</a></p>
+            <p className="text-gray-400">Email: <a href="mailto:trivedaofficial@gmail.com" className="hover:text-white">trivedaofficial@gmail.com</a></p>
+            <p className="text-gray-400">Phone: <a href="tel:+919110326779" className="hover:text-white">+919110326779</a></p>
           </div>
         </div>
 
