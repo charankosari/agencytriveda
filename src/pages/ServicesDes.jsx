@@ -10,7 +10,7 @@ export default function ServicesDes() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col  bg-gradient-to-b from-gray-950 to-gray-900 font-sora">
+    <div className="p-customPaddingMobile md:p-customPadding min-h-screen flex flex-col  bg-gradient-to-b from-gray-950 to-gray-900 font-sora">
       <div className="container mx-auto px-6 py-12">
         <h1 className="font-bold  text-3xl md:text-4xl lg:text-5xl mb-4 text-textPrimary">
           {service.services}
