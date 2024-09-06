@@ -50,7 +50,7 @@ export default function Services() {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 py-4 w-full'>
         {data && data.length > 0 ? (
           data.map((item, index) => (
-            <div key={index} className='bg-slate-900 shadow-md rounded-lg p-4 flex items-center justify-center text-center h-24 lg:h-[400px] hover:bg-slate-800 cursor-pointer ' onClick={()=>handleService(item)}>
+            <div key={index} className='bg-slate-900 shadow-md rounded-lg p-4 flex items-center justify-center text-center h-20 lg:h-[100px] hover:bg-slate-800 cursor-pointer ' onClick={()=>handleService(item)}>
               <h2 className='font-bold text-lg font-sora'>{item.services}</h2>
             </div>
           ))
