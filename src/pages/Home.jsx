@@ -9,7 +9,7 @@ import FAQSection from './FAQ';
 import ContactUs from './Contactus';
 import Footer from './Footer';
 import Clients from './Clients';
-import Logo from '../assets/images/logo.png';
+import Logo from '../assets/images/land.png';
 import { Link } from 'react-router-dom';
 
 
