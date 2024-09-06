@@ -18,6 +18,25 @@ const ContactUs = () => {
                   className='w-full px-4 py-3 border border-gray-700 rounded-lg bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
                   required
                 />
+                 <div className="flex items-center border overflow-hidden border-gray-600 rounded-lg focus-within:ring-2 focus-within:ring-blue-500 bg-gray-900">
+                    <select
+                      className="w-20 md:w-24 px-4 py-3 bg-gray-800 border-gray-600 text-gray-500 focus:outline-none"
+                      defaultValue="+91"
+                      required
+                    >
+                      <option value="+91">+91</option>
+                      <option value="+1">+1</option>
+                      <option value="+44">+44</option>
+                      <option value="+61">+61</option>
+                    </select>
+                    <input
+                      type="tel"
+                      pattern="[0-9]{10}"
+                      placeholder="Your Phone Number"
+                      className="w-full px-4 py-2 focus:outline-none bg-gray-900 text-gray-200"
+                      required
+                    />
+                  </div>
                 <input
                   type='email'
                   placeholder='Your Email'
