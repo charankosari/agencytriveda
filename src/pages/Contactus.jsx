@@ -12,7 +12,7 @@ const ContactUs = () => {
           <div className="flex flex-col lg:flex-row lg:space-x-12">
             <div className="lg:w-1/2">
               <h2 className='text-xl font-semibold mb-4'>Get in Touch</h2>
-              
+
               <form className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
@@ -21,6 +21,28 @@ const ContactUs = () => {
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-900 dark:border-gray-600 dark:text-gray-200"
                     required
                   />
+                  {/* <div className="flex items-center border overflow-hidden border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-blue-500 dark:bg-gray-900 dark:border-gray-600">
+                    <select
+                      className=" w-20 md:w-24 px-4 py-3  bg-gray-100 dark:bg-gray-800 border-r border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 focus:outline-none"
+                      defaultValue="+91"
+                      required
+                    >
+                      <option value="+91">+91 </option>
+                      <option value="+1">+1 </option>
+                      <option value="+44">+44 </option>
+                      <option value="+61">+61 </option>
+
+                    </select>
+                    <input
+                      type="tel"
+                      pattern="[0-9]{10}"
+                      placeholder="Your Phone Number"
+                      className="w-full px-4 py-2 focus:outline-none dark:bg-gray-900 dark:text-gray-200"
+                      required
+                    />
+                  </div> */}
+
+
                   <input
                     type="email"
                     placeholder="Your Email"

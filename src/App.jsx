@@ -5,6 +5,7 @@ import Jobs from './pages/Jobs'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
 import Porfolio from './pages/Portolio'
+import ServicesDes from './pages/ServicesDes'
 function App() {
  
 
@@ -18,6 +19,7 @@ function App() {
   <Route path='/services' element={<Services/>}></Route>
   <Route path='/contact' element={<Contact/>}></Route>
   <Route path='/portfolio' element={<Porfolio/>}></Route>
+  <Route path='/servicedescription' element={<ServicesDes/>}></Route>
  </Routes>
   </BrowserRouter>
   </>
