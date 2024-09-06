@@ -15,6 +15,7 @@ export default {
         'sora': ['Sora', 'sans-serif'], 
       },
       colors: {
+        'black': '#000000', 
         'main': '#1D4ED8', 
         'accent': '#F59E0B', 
         'background': '#F3F4F6', 

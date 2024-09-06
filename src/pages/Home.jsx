@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 export default function Home() {
 
   return (
-    <div className='px-customPaddingMobile bg-gray-950 text-white md:px-customPadding  '>
+    <div className='px-customPaddingMobile bg-black text-white md:px-customPadding  '>
       <div className='flex flex-col lg:mb-36  md:flex-row  font-sora  '>
         <div className='lg:mb-10'>
           <div className='flex flex-col space-y-2 mt-4  md:mt-36 px-customPaddingMobile items-start justify-center'>

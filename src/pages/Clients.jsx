@@ -17,7 +17,7 @@ const Clients = () => {
     ];
 
     return (
-        <div className="bg-gray-950 py-4 mt-12">
+        <div className="bg-black py-4 mt-12">
             <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8 text-white'>
                 Our Clients
             </h1>

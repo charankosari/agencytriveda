@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="px-customPaddingMobile bg-gray-950 text-white md:px-customPadding py-2">
+      <nav className="px-customPaddingMobile bg-black text-white md:px-customPadding py-2">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <div>
