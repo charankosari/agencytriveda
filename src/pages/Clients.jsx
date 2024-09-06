@@ -3,10 +3,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
+import l1 from '../assets/images/tesla-logo.png'
 
 const Clients = () => {
     const clients = [
-        "Google", "Tesla", "Nvidia", "Apple", "Microsoft", "Amazon", "Facebook", "IBM", "Intel", "Adobe"
+        {name: "Tesla",logo:l1},
+        {name: "Apple",logo:l1},
+        {name: "Tesla",logo:l1},
+        {name: "Tesla",logo:l1},
+        {name: "Apple",logo:l1},
+        {name: "Tesla",logo:l1},
+        {name: "Apple",logo:l1}
     ];
 
     return (
@@ -32,7 +39,15 @@ const Clients = () => {
             >
                 {clients.map((client, index) => (
                     <SwiperSlide key={index} className="text-rose-400 font-semibold text-lg text-center">
-                        {client}
+                      <div className='flex flex-col items-center justify-center gap-1 md:gap-2 lg:gap-4'>
+                      <div>
+                            <img src={client.logo} className=' bg-cyan-50 w-20 h-20 md:w-40 md:h-40'></img>
+                        </div>
+                        <div>
+                        {client.name}
+                        </div>
+                      </div>
+               
                     </SwiperSlide>
                 ))}
             </Swiper>
