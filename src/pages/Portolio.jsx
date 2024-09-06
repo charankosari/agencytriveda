@@ -6,9 +6,9 @@ import p3 from '../assets/images/p3.png';
 
 export default function Porfolio() {
   const services = [
-    { name: "Shop rags", description: "Custom websites and web applications.", img: p1 },
-    { name: "Atharva", description: "Mobile apps for iOS and Android.", img: p2 },
-    { name: "Portfolio", description: "Strategies to boost your online presence.", img: p3 },
+    { name: "Shop rags", description: "Custom websites and web applications.", img: p1,type:"Website" },
+    { name: "Atharva", description: "Mobile apps for iOS and Android.", img: p2 ,type:"App"},
+    { name: "Portfolio", description: "Strategies to boost your online presence.", img: p3,type:"Website" },
   ];
 
   return (
@@ -25,10 +25,16 @@ export default function Porfolio() {
               className="bg-white cursor-pointer text-gray-800 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105"
             >
               <img src={service.img} alt={service.name} className="w-full h-64 object-cover" />
-              <div className="p-6 text-center">
-                <h2 className="font-bold text-2xl mb-2">{service.name}</h2>
-                <p className="text-gray-700">{service.description}</p>
+        <div className='flex'> 
+        <div className="p-6 text-center">
+                <h2 className=" text-left font-bold text-2xl mb-2">{service.name}</h2>
+                <p className="text-left text-gray-700">{service.description}</p>
               </div>
+              <div className="p-6 text-center">
+                <button className=" rounded-full bg-rose-300 px-2 py-1 text-right font-normal text-sm mb-2">{service.type}</button >
+              
+              </div>
+          </div>
             </div>
           ))}
         </div>
