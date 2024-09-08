@@ -8,7 +8,7 @@ export default function About() {
         Discover Who We Are
       </h1>
       <div className='flex flex-col md:flex-row w-full md:space-x-8 space-y-8 md:space-y-0'>
-        <div className='flex flex-col items-center md:items-start text-gray-300 font-sora md:w-1/2'>
+        <div className='flex flex-col text-md md:text-md lg:text-lg items-center md:items-start text-gray-300 font-sora md:w-1/2'>
           <p className='text-center md:text-left leading-relaxed mb-4'>
           Triveda is more than an agency; it represents the inception of a grand vision. Founded by Vallabhaneni Lakshmi Suresh Chandra and Kosari Shiva Charan, we are dedicated to delivering exceptional services in web development and app development. Our journey commenced with a shared passion for innovation and an unwavering commitment to excellence
           </p>
