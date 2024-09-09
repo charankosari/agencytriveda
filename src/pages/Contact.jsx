@@ -17,7 +17,7 @@ const ContactUs = () => {
       const apiUrl = import.meta.env.VITE_API_URL;
       const phone = countryCode.concat(phoneNumber);
 
-      const response = await axios.post(`${apiUrl}/api/contacts/addContact`, {
+      const response = await axios.post(`${apiUrl}/api/website/addContact`, {
         clientName,
         phoneNumber: phone,
         email,
