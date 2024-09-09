@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <div className='px-customPaddingMobile bg-black text-white md:px-customPadding  '>
-      <div className='flex flex-col lg:mb-36  md:flex-row  font-sora  '>
+      <div className='flex flex-col lg:mb-36  md:flex-row h-screen font-sora  '>
         <div className='lg:mb-10'>
           <div className='flex flex-col space-y-2 mt-4  md:mt-16 lg:mt-28 px-customPaddingMobile items-start justify-center'>
             <h1 className='font-sora text-textPrimary font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:mb-4 animate-topToBottom'>
