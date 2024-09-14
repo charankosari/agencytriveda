@@ -1,4 +1,4 @@
-// src/components/FAQSection.jsx
+
 import React, { useState } from 'react';
 
 const faqs = [
@@ -14,7 +14,7 @@ const faqs = [
     question: "What is the typical turnaround time for a project?",
     answer: "Our typical turnaround time is 2-4 weeks depending on the complexity of the project."
   },
-  // Add more FAQs here
+ 
 ];
 
 const FAQSection = () => {
