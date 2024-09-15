@@ -36,8 +36,8 @@ const ContactUs = () => {
   };
 
   return (
-    <div className='flex items-center justify-center h-screen bg-gray-950 px-4 text-gray-100 font-sora'>
-      <div className='w-full max-w-3xl p-8 md:p-12 lg:p-16 bg-gray-900 rounded-lg shadow-lg'>
+    <div className='flex items-center justify-center h-screen bg-black px-4 text-gray-100 font-sora'>
+      <div className='w-full max-w-3xl p-8 md:p-12 lg:p-16 bg-light border-[1px] border-gray-900 border-opacity-35 rounded-lg shadow-2xl'>
         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8'>
           Contact Us
         </h1>
