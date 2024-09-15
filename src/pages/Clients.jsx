@@ -1,58 +1,66 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
-import l1 from '../assets/images/tesla-logo.png'
+import l1 from '../assets/images/tesla-logo.png';
 
 const Clients = () => {
-    const clients = [
-        {name: "Tesla",logo:l1},
-        {name: "Apple",logo:l1},
-        {name: "Tesla",logo:l1},
-        {name: "Tesla",logo:l1},
-        {name: "Apple",logo:l1},
-        {name: "Tesla",logo:l1},
-        {name: "Apple",logo:l1}
-    ];
+  const [clients, setClients] = useState([]);
 
-    return (
-        <div className="bg-black py-4 mt-12">
-            <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8 text-white'>
-                Our Clients
-            </h1>
-            <Swiper
-                spaceBetween={30}
-                slidesPerView={1}
-                loop={true}
-                autoplay={{
-                    delay: 0,
-                    disableOnInteraction: false,
-                }}
-                speed={3000}
-                modules={[Autoplay]}
-                breakpoints={{
-                    1024: { slidesPerView: 5 },
-                    600: { slidesPerView: 3 },
-                    480: { slidesPerView: 2 },
-                }}
-            >
-                {clients.map((client, index) => (
-                    <SwiperSlide key={index} className="text-rose-400 font-semibold text-lg text-center">
-                      <div className='flex flex-col items-center justify-center gap-1 md:gap-2 lg:gap-4'>
-                      <div>
-                            <img src={client.logo} className=' bg-cyan-50 w-20 h-20 md:w-40 md:h-40'></img>
-                        </div>
-                        <div>
-                        {client.name}
-                        </div>
-                      </div>
-               
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </div>
-    );
+  useEffect(() => {
+    async function getData() {
+      try {
+        const apiUrl = import.meta.env.VITE_API_URL;
+        const res = await axios.get(`${apiUrl}/api/website/clients/getAllClientCompanies`);
+        
+        // Check if res.data contains clients list
+        setClients(res.data);
+        console.log(res.data);  // Logging the correct variable
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    getData();
+  }, []);
+
+  return (
+    <div className="bg-black py-4 mt-12">
+      <h1 className="font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8 text-white">
+        Our Clients
+      </h1>
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={1}
+        loop={true}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+        }}
+        speed={3000}
+        modules={[Autoplay]}
+        breakpoints={{
+          1024: { slidesPerView: 2 },
+          600: { slidesPerView: 2 },
+          480: { slidesPerView: 1 },
+        }}
+      >
+        {clients.length > 0 ? clients.map((client, index) => (
+          <SwiperSlide key={index} className="text-rose-400 font-semibold text-lg text-center">
+            <div className="flex flex-col items-center justify-center gap-1 md:gap-2 lg:gap-4">
+              <div className='rounded-md'>
+                <img src={client.logo} alt={client.name} className="bg-cyan-50 w-20 h-20 md:w-40 md:h-40" />
+              </div>
+            </div>
+          </SwiperSlide>
+        )) : (
+          <div className="text-white text-center">No clients available.</div>
+        )}
+      </Swiper>
+    </div>
+  );
 };
 
 export default Clients;
