@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Alert from '../components/Alert';
 
 const ContactUs = () => {
   const [clientName, setClientName] = useState('');
@@ -8,6 +9,9 @@ const ContactUs = () => {
   const [phoneNumber, setNumber] = useState('');
   const [countryCode, setCountryCode] = useState('+91');
   const [loading,setLoading] = useState(true)
+  const [alertMessage,setAlertMessage] = useState('')
+  const [alertType,setAlertType] = useState('')
+
  
 
   const handleSubmit = async (e) => {
@@ -23,20 +27,26 @@ const ContactUs = () => {
         email,
         message,
       });
-  
+
       setLoading(true)
       setClientName('');
       setEmail('');
       setmessage('');
       setCountryCode('+91');
       setNumber('');
+      setAlertMessage("Message sent! We'll get back to you shortly.")
+      setAlertType("success")
     } catch (error) {
       console.error('Error submitting contact details:', error);
+      setAlertMessage("Oops! Something went wrong.")
+      setAlertType("error")
     }
   };
 
   return (
-    <div className='flex items-center justify-center h-screen bg-black px-4 text-gray-100 font-sora'>
+    <div className='flex items-center flex-col justify-center h-screen bg-black px-4 text-gray-100 font-sora'>
+     
+      {alertType &&   <Alert type={alertType} message={alertMessage}></Alert>}
       <div className='w-full max-w-3xl p-8 md:p-12 lg:p-16 bg-light border-[1px] border-gray-900 border-opacity-35 rounded-lg shadow-2xl'>
         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8'>
           Contact Us
