@@ -17,31 +17,44 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      setLoading(false)
+      setLoading(false);
       const apiUrl = import.meta.env.VITE_API_URL;
-      const phone = countryCode.concat(phoneNumber);
+
 
       const response = await axios.post(`${apiUrl}/api/website/contact/addContact`, {
         clientName,
-        phoneNumber: phone,
+        phoneNumber,
+        countryCode,
         email,
         message,
       });
 
-      setLoading(true)
+      // If successful, reset form fields
+      setLoading(true);
       setClientName('');
       setEmail('');
       setmessage('');
       setCountryCode('+91');
       setNumber('');
-      setAlertMessage("Message sent! We'll get back to you shortly.")
-      setAlertType("success")
+      setAlertMessage("Message sent! We'll get back to you shortly.");
+      setAlertType("success");
+
     } catch (error) {
+      setLoading(true);
       console.error('Error submitting contact details:', error);
-      setAlertMessage("Oops! Something went wrong.")
-      setAlertType("error")
+
+      // Check if the error response is a validation error (status 400)
+      if (error.response && error.response.status === 400) {
+        const validationErrors = error.response.data.errors;
+        setAlertMessage(validationErrors.join(' ')); // Combine validation messages into a single string
+        setAlertType("error");
+      } else {
+        setAlertMessage("Oops! Something went wrong. Please try again.");
+        setAlertType("error");
+      }
     }
-  };
+};
+
 
   return (
     <div className='flex items-center flex-col justify-center h-screen bg-black px-4 text-gray-100 font-sora'>
