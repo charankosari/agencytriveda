@@ -7,23 +7,22 @@ import { Autoplay } from 'swiper/modules';
 
 const Clients = () => {
   const [clients, setClients] = useState([]);
-  const swiperRef = useRef(null); 
-  
+  const swiperRef = useRef(null);  // Ref to access Swiper instance
 
   useEffect(() => {
     async function getData() {
       try {
         const apiUrl = import.meta.env.VITE_API_URL;
+        console.log('API URL:', apiUrl);  // Debug to check if the URL is correct
         const res = await axios.get(`${apiUrl}/api/website/clients/getAllClientCompanies`);
         
         setClients(res.data);
 
-        // If swiper is initialized, update it after data is fetched
+        // Ensure Swiper updates after clients are loaded
         if (swiperRef.current) {
-          swiperRef.current.swiper.update();  
+          swiperRef.current.swiper.update();  // Update Swiper after data fetch
+          swiperRef.current.swiper.autoplay.start();  // Force autoplay to start
         }
-        
-        console.log(res.data); 
       } catch (error) {
         console.log(error);
       }
@@ -38,7 +37,7 @@ const Clients = () => {
         Our Clients
       </h1>
       <Swiper
-        ref={swiperRef}  
+        ref={swiperRef}  // Attach ref to Swiper
         spaceBetween={30}
         slidesPerView={1}
         loop={true}
