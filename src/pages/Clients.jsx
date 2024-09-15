@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
-import l1 from '../assets/images/tesla-logo.png';
 
 const Clients = () => {
   const [clients, setClients] = useState([]);
+  const swiperRef = useRef(null); 
+  
 
   useEffect(() => {
     async function getData() {
@@ -15,9 +16,14 @@ const Clients = () => {
         const apiUrl = import.meta.env.VITE_API_URL;
         const res = await axios.get(`${apiUrl}/api/website/clients/getAllClientCompanies`);
         
-        // Check if res.data contains clients list
         setClients(res.data);
-        console.log(res.data);  // Logging the correct variable
+
+        // If swiper is initialized, update it after data is fetched
+        if (swiperRef.current) {
+          swiperRef.current.swiper.update();  
+        }
+        
+        console.log(res.data); 
       } catch (error) {
         console.log(error);
       }
@@ -32,11 +38,12 @@ const Clients = () => {
         Our Clients
       </h1>
       <Swiper
+        ref={swiperRef}  
         spaceBetween={30}
         slidesPerView={1}
         loop={true}
         autoplay={{
-          delay: 0,
+          delay: 1,
           disableOnInteraction: false,
         }}
         speed={3000}
