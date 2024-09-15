@@ -30,7 +30,7 @@ export default function Home() {
             Triveda turns your vision into reality with custom solutions...
           </p>
         </div>
-        <div className='flex mt-6 space-x-4'>
+        <div className='flex mt-6 ml-4 space-x-4'>
           <Link to='/portfolio'><Button label="See our Work" /></Link>
           <Link to='/contact'><Button label="Contact us" /></Link>
         </div>
