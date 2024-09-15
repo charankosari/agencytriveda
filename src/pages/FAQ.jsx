@@ -1,29 +1,31 @@
 
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
-const faqs = [
-  {
-    question: "What services do you offer?",
-    answer: "We offer a range of web development services including landing pages, portfolios, and custom websites."
-  },
-  {
-    question: "How can I contact you?",
-    answer: "You can contact us via the contact form on our website or email us directly at contact@triveda.com."
-  },
-  {
-    question: "What is the typical turnaround time for a project?",
-    answer: "Our typical turnaround time is 2-4 weeks depending on the complexity of the project."
-  },
- 
-];
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [faqs,setFAQS] = useState([])
 
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  useEffect(()=>{
+    async function getData() {
+
+      try {
+        const apiUrl = import.meta.env.VITE_API_URL;
+        const res = await axios.get(`${apiUrl}/api/website/fqa/getFQAs`)
+       setFAQS(res.data)
+      } catch (error) {
+        console.log(error)
+      }
+  
+    }
+
+    getData()
+  },[setFAQS])
   return (
     <div className='px-4 md:px-8 lg:px-12  mt-12 font-sora'>
       <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-8 text-gray-100'>
