@@ -6,7 +6,7 @@ const ContactUs = () => {
       <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-8 text-gray-200'>
         Contact Us
       </h1>
-      <section className="bg-gray-900 rounded-lg shadow-md">
+      <section className="bg-gray-950 rounded-lg shadow-md">
         <div className="w-full px-6 py-8 mx-auto">
           <div className="flex flex-col lg:flex-row lg:space-x-12">
             <div className="lg:w-1/2">
