@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 export default function Testimonials() {
     const reviews = [
@@ -6,9 +8,27 @@ export default function Testimonials() {
         { review: "Incredible service! The team at Triveda went above and beyond to deliver outstanding results.",clientName:"zoro",clientCompany:"Tesla" },
         { review: "Amazing experience! Highly recommend Triveda for all your development needs.",clientName:"Nami" ,clientCompany:"Nivida"  }
     ];
-
+    const [review,setReviews] = useState([])
     const [currentReview, setCurrentReview] = useState(0);
     const [transition, setTransition] = useState('opacity-0'); 
+
+
+    useEffect(()=>{
+        async function getData() {
+    
+          try {
+            const apiUrl = import.meta.env.VITE_API_URL;
+            const res = await axios.get(`${apiUrl}/api/website/testimonials/getTestimonials`)
+           setReviews(res)
+           console.log(review)
+          } catch (error) {
+            console.log(error)
+          }
+      
+        }
+    
+        getData()
+      },[setReviews])
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -22,6 +42,7 @@ export default function Testimonials() {
         return () => clearInterval(intervalId); 
     }, [reviews.length]);
 
+    
     return (
         <div className='px-customPaddingMobile md:px-[2rem] mt-12'>
             <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8'>
