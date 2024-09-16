@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Spinner from '../components/Spinner';
 
 export default function Portfolio() {
   const [projects, setProjects] = useState([]);
@@ -38,11 +39,12 @@ export default function Portfolio() {
   };
 
   if (isLoading) {
-    return <div className="text-center text-white mt-20">Loading...</div>;
+    return <Spinner></Spinner>
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-black text-white font-sora">
+  
+      <div className="min-h-screen bg-black text-white font-sora">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl mb-4 text-textPrimary animate-fadeIn">
           Portfolio
@@ -67,13 +69,15 @@ export default function Portfolio() {
                   <h2 className="text-left font-bold text-xl sm:text-2xl mb-2">{project.projectName}</h2>
                   <p className="text-left text-gray-700">{project.description}</p>
                 </div>
-                <div className="p-4 sm:p-6 text-center sm:text-left">
+                <div className="p-4 sm:p-6 text-left sm:text-left">
+           
+
                   <button
-                    className="rounded-full bg-rose-300 px-3 py-1 text-sm sm:text-base mb-2 transition duration-300 hover:bg-rose-400"
-                    onClick={() => handleDemoClick(project.demo)}
-                  >
-                    Demo
-                  </button>
+                className=" px-3 py-2 bg-black rounded-full bg-opacity-75 backdrop-blur-sm text-white font-semibold hover:bg-opacity-30 transition"
+                onClick={() => handleDemoClick(project.demo)}
+              >
+                Demo
+              </button>
                 </div>
               </div>
             </div>
@@ -97,5 +101,6 @@ export default function Portfolio() {
         </div>
       )}
     </div>
+
   );
 }
