@@ -35,7 +35,7 @@ export default function Home() {
           <Link to='/contact'><Button label="Contact us" /></Link>
         </div>
       </div>
-      <div className=' md:mb-32 flex items-center justify-center w-full lg:w-1/2'>
+      <div className='mt-10 md:mb-32 flex items-center justify-center w-full lg:w-1/2'>
         <img
           src={Logo}
           alt="Logo"
