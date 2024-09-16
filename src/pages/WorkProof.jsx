@@ -5,8 +5,8 @@ import React, { useEffect, useState } from 'react';
 export default function WorkProof() {
 
   const [projects, setProjects] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
-  const [modalMessage, setModalMessage] = useState(""); // Modal message state
+  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const [modalMessage, setModalMessage] = useState(""); 
 
   useEffect(() => {
     async function fetchProjects() {
