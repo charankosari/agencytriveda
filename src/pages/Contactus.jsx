@@ -127,10 +127,10 @@ const ContactUs = () => {
                 <strong>Address:</strong> Hyderabad, India
               </p>
               <p className='text-gray-400 mb-4'>
-                <strong>Phone:</strong> +91 60000 34987
+              Phone: <a href="tel:+919110326779" className="hover:text-white transition-colors duration-200">+919110326779</a>
               </p>
               <p className='text-gray-400 mb-4'>
-                <strong>Email:</strong> contact@triveda.com
+              Email: <a href="mailto:trivedaofficial@gmail.com" className="hover:text-white transition-colors duration-200">trivedaofficial@gmail.com</a>
               </p>
 
               {/* Social Media Icons */}

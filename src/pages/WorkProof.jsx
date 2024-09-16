@@ -14,7 +14,7 @@ export default function WorkProof() {
         const apiUrl = import.meta.env.VITE_API_URL;
         const res = await axios.get(`${apiUrl}/api/website/portfolio/getPortfolioProjects`);
         setProjects(res.data);
-        console.log(res.data);
+   
       } catch (error) {
         console.error("Error fetching projects:", error);
       }
