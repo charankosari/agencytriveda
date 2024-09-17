@@ -42,8 +42,7 @@ export default function Portfolio() {
   // Filter logic based on selected category
   const filteredProjects = selectedCategory === "All" 
     ? projects 
-    : projects.filter((project) => project.category.trim() === selectedCategory); // Trimming extra spaces
-
+    : projects.filter((project) => project.category.trim() === selectedCategory); 
   if (isLoading) {
     return <Spinner />;
   }
@@ -59,26 +58,26 @@ export default function Portfolio() {
         </p>
 
         {/* Filter Options */}
-        <div className="flex justify-center mb-8">
-          <button
-            className={`px-4 py-2 mx-2 ${selectedCategory === "All" ? "bg-rose-500" : "bg-gray-700"} rounded-full text-white`}
-            onClick={() => setSelectedCategory("All")}
-          >
-            All
-          </button>
-          <button
-            className={`px-4 py-2 mx-2 ${selectedCategory === "Web Development" ? "bg-rose-500" : "bg-gray-700"} rounded-full text-white`}
-            onClick={() => setSelectedCategory("Web Development")}
-          >
-            Web Development
-          </button>
-          <button
-            className={`px-4 py-2 mx-2 ${selectedCategory === "App development" ? "bg-rose-500" : "bg-gray-700"} rounded-full text-white`}
-            onClick={() => setSelectedCategory("App development")}
-          >
-            App Development
-          </button>
-        </div>
+        <div className="flex flex-wrap justify-center mb-8">
+  <button
+    className={`px-4 py-2 m-2 ${selectedCategory === "All" ? "bg-rose-500" : "bg-gray-700"} rounded-full text-white`}
+    onClick={() => setSelectedCategory("All")}
+  >
+    All
+  </button>
+  <button
+    className={`px-4 py-2 m-2 ${selectedCategory === "Web Development" ? "bg-rose-500" : "bg-gray-700"} rounded-full text-white`}
+    onClick={() => setSelectedCategory("Web Development")}
+  >
+    Web Development
+  </button>
+  <button
+    className={`px-4 py-2 m-2 ${selectedCategory === "App development" ? "bg-rose-500" : "bg-gray-700"} rounded-full text-white`}
+    onClick={() => setSelectedCategory("App development")}
+  >
+    App Development
+  </button>
+</div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
