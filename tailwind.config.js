@@ -6,6 +6,8 @@ export default {
   ],
   theme: {
     extend: {
+
+      
       padding: {
         'customPaddingMobile': '1rem', 
         'customPadding': '5rem', 

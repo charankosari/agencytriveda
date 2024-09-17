@@ -20,9 +20,19 @@ export default function Home() {
     <div className='flex flex-col md:flex-row min-h-screen font-sora'>
       <div className=' w-full lg:w-1/2'>
         <div className='flex flex-col space-y-4 mt-4 md:mt-16 lg:mt-28 px-customPaddingMobile items-start justify-center'>
-          <h1 className='font-sora text-textPrimary font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight'>
-            Triveda
-          </h1>
+   
+  <h1 className="font-sora text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight" 
+      style={{
+        background: "linear-gradient(to right, #7f1d1d, #fb7185, #fda4af)",
+        WebkitBackgroundClip: "text",
+        color: "transparent"
+      }}>
+    Triveda
+  </h1>
+
+
+
+
           <h1 className='text-gray-50 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight'>
             Crafting Custom Solutions from Vision to Victory
           </h1>
