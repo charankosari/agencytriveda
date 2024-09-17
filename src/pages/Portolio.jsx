@@ -7,6 +7,7 @@ export default function Portfolio() {
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All"); // New state for filtering
 
   useEffect(() => {
     async function fetchProjects() {
@@ -38,6 +39,11 @@ export default function Portfolio() {
     setModalMessage("");
   };
 
+  // Filter logic based on selected category
+  const filteredProjects = selectedCategory === "All" 
+    ? projects 
+    : projects.filter((project) => project.category.trim() === selectedCategory); // Trimming extra spaces
+
   if (isLoading) {
     return <Spinner />;
   }
@@ -52,12 +58,35 @@ export default function Portfolio() {
           "At Triveda, we are committed to crafting digital excellence, where our work truly speaks for itself."
         </p>
 
+        {/* Filter Options */}
+        <div className="flex justify-center mb-8">
+          <button
+            className={`px-4 py-2 mx-2 ${selectedCategory === "All" ? "bg-rose-500" : "bg-gray-700"} rounded-full text-white`}
+            onClick={() => setSelectedCategory("All")}
+          >
+            All
+          </button>
+          <button
+            className={`px-4 py-2 mx-2 ${selectedCategory === "Web Development" ? "bg-rose-500" : "bg-gray-700"} rounded-full text-white`}
+            onClick={() => setSelectedCategory("Web Development")}
+          >
+            Web Development
+          </button>
+          <button
+            className={`px-4 py-2 mx-2 ${selectedCategory === "App development" ? "bg-rose-500" : "bg-gray-700"} rounded-full text-white`}
+            onClick={() => setSelectedCategory("App development")}
+          >
+            App Development
+          </button>
+        </div>
+
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <div
               key={index}
               className="bg-light cursor-pointer text-gray-100 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col justify-between border-1px"
-              style={{ minHeight: '300px' }} 
+              style={{ minHeight: '300px' }}
             >
               <img
                 src={project.coverImage}
@@ -74,14 +103,11 @@ export default function Portfolio() {
                 </p>
               </div>
 
-             
               <div className="p-4 sm:p-6 flex justify-between items-center">
                 <button
                   className="px-6 py-3 border-2 border-rose-500 rounded-full text-white font-semibold transition duration-300 ease-in-out transform hover:scale-105"
-            
                 >
-                  {project.
-                    category}
+                  {project.category}
                 </button>
                 <button
                   className="px-6 py-3 bg-rose-500 rounded-full text-white font-semibold transition duration-300 ease-in-out transform hover:scale-105"
