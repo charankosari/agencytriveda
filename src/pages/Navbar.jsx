@@ -55,14 +55,14 @@ const Navbar = () => {
             <RemoveIcon />
           </button>
         </div>
-        <nav className="flex flex-col p-4 space-y-4">
+        <nav className="flex flex-col p-10 space-y-4">
           {navbarItems &&
             navbarItems.map((item, index) => (
               <Link key={index} to={`/${item.item.toLowerCase()}`}>
-              <div className='flex justify-start items-start px-4 space-x-2  '>
+              <div className='flex justify-start items-start p-4 space-x-4 rounded-md hover:underline '  onClick={toggleSidebar}>
                 <div>
                   <item.icon />
-                </div> <div className='text-gray-400 hover:text-gray-100'>
+                </div> <div className='text-gray-400 '>
                   {item.item}
                 </div>
               </div>
