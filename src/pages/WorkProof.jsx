@@ -54,7 +54,7 @@ export default function WorkProof() {
             />
 
             <div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-              <h2 className='font-bold text-2xl font-sora'>{project.projectName}</h2>
+              <h2 className='font-bold md md:text-xl font-sora'>{project.projectName}</h2>
               <p className='mt-2 text-sm'>{project.description}</p>
 
               <button
