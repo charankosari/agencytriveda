@@ -1,5 +1,5 @@
 import React from 'react';
-import Founders from '../assets/images/founders.jpg';
+import Founders from '../assets/images/founderss.jpg';
 
 export default function About() {
   return (
