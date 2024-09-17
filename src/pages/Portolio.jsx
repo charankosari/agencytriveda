@@ -104,15 +104,15 @@ export default function Portfolio() {
 
               <div className="p-4 sm:p-6 flex justify-between items-center">
                 <button
-                  className="px-6 py-3 border-2 border-rose-500 rounded-full text-white font-semibold transition duration-300 ease-in-out transform hover:scale-105"
+                  className=" px-2 py-2 md:px-6 md:py-3 border-[1px] border-rose-300 border-opacity-65 rounded-full text-white text-xs md:text-md  "
                 >
                   {project.category}
                 </button>
                 <button
-                  className="px-6 py-3 bg-rose-500 rounded-full text-white font-semibold transition duration-300 ease-in-out transform hover:scale-105"
+                  className="px-2 py-2 md:px-6 md:py-3 bg-rose-500 rounded-full text-white text-xs md:text-md  font-semibold transition duration-300 ease-in-out transform hover:scale-105"
                   onClick={() => handleDemoClick(project.demo)}
                 >
-                  View Demo
+                   Demo
                 </button>
               </div>
             </div>
