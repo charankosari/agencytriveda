@@ -68,10 +68,10 @@ const ContactUs = () => {
 
   return (
     <div className='px-4 md:px-8 lg:px-12 py-12 font-sora'>
-      <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-white'>
-        Contact Us
+   
+      <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-8 text-gray-100'>
+      Contact Us
       </h1>
-
       {/* Alert Component */}
       {alertType && <Alert type={alertType} message={alertMessage} />}
 
@@ -151,11 +151,33 @@ const ContactUs = () => {
                 <strong>Address:</strong> Hyderabad, India
               </p>
               <p className='text-gray-400 mb-4'>
-                Phone: <a href="tel:+919123456789" className='text-blue-400'>+91 91234 56789</a>
+              Phone: <a href="tel:+919110326779" className="hover:text-white transition-colors duration-200">+919110326779</a>
               </p>
               <p className='text-gray-400 mb-4'>
-                Email: <a href="mailto:contact@triveda.com" className='text-blue-400'>contact@triveda.com</a>
+              Email: <a href="mailto:trivedaofficial@gmail.com" className="hover:text-white transition-colors duration-200">trivedaofficial@gmail.com</a>
               </p>
+
+              <p className="text-gray-400">
+           
+               Follow us
+                <div className="flex space-x-4 justify-start md:justify-start mt-6">
+                  {/* LinkedIn Icon */}
+                  <a href="https://www.linkedin.com/company/trivedhaofficial/" target="_blank" rel="noopener noreferrer">
+                    <svg className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11.5 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.5c0-1.381-1.119-2.5-2.5-2.5s-2.5 1.119-2.5 2.5v5.5h-3v-10h3v1.382c.888-.831 2.06-1.382 3.5-1.382 2.481 0 4.5 2.019 4.5 4.5v5.5z" />
+                    </svg>
+                  </a>
+
+                  {/* Instagram Icon */}
+                  <a href="https://www.instagram.com/triveda_official?igsh=MTR5anFtMXp4OXNkdQ==" target="_blank" rel="noopener noreferrer">
+                    <svg className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.98.24 2.43.403.6.21 1.037.458 1.49.912.454.453.702.89.912 1.49.163.45.347 1.26.403 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.98-.403 2.43-.21.6-.458 1.037-.912 1.49-.453.454-.89.702-1.49.912-.45.163-1.26.347-2.43.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.98-.24-2.43-.403-.6-.21-1.037-.458-1.49-.912-.454-.453-.702-.89-.912-1.49-.163-.45-.347-1.26-.403-2.43-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.056-1.17.24-1.98.403-2.43.21-.6.458-1.037.912-1.49.453-.454.89-.702 1.49-.912.45-.163 1.26-.347 2.43-.403 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.262 0-3.67.012-4.947.072-1.276.059-2.154.27-2.91.57-.793.314-1.47.733-2.148 1.41-.677.678-1.096 1.355-1.41 2.148-.3.756-.511 1.634-.57 2.91-.06 1.277-.072 1.685-.072 4.947s.012 3.67.072 4.947c.059 1.276.27 2.154.57 2.91.314.793.733 1.47 1.41 2.148.678.677 1.355 1.096 2.148 1.41.756.3 1.634.511 2.91.57 1.277.06 1.685.072 4.947.072s3.67-.012 4.947-.072c1.276-.059 2.154-.27 2.91-.57.793-.314 1.47-.733 2.148-1.41.677-.678 1.096-1.355 1.41-2.148.3-.756.511-1.634.57-2.91.06-1.277.072-1.685.072-4.947s-.012-3.67-.072-4.947c-.059-1.276-.27-2.154-.57-2.91-.314-.793-.733-1.47-1.41-2.148-.678-.677-1.355-1.096-2.148-1.41-.756-.3-1.634-.511-2.91-.57-1.277-.06-1.685-.072-4.947-.072z" />
+                      <path d="M12 5.838a6.163 6.163 0 1 0 0 12.326 6.163 6.163 0 0 0 0-12.326zm0 10.164a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-10.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
+                    </svg>
+                  </a>
+                </div>
+              </p>
+
             </div>
           </div>
         </div>

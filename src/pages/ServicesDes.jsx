@@ -4,11 +4,11 @@ import Spinner from '../components/Spinner';
 import { useParams } from 'react-router-dom';
 
 export default function ServicesDes() {
-  const [service, setService] = useState(null);  // Initialize service as null
+  const [service, setService] = useState(null);  
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { id } = useParams();  // useParams does not take any arguments
+  const { id } = useParams();  
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,32 +19,32 @@ export default function ServicesDes() {
       try {
         const apiUrl = import.meta.env.VITE_API_URL;
         
-        // Fetch the service data
+      
         const serviceResponse = await axios.get(`${apiUrl}/api/website/services/getOne/${id}`);
         const fetchedService = serviceResponse.data;
         setService(fetchedService);
 
-        // Fetch all projects
+     
         const projectResponse = await axios.get(`${apiUrl}/api/website/portfolio/getPortfolioProjects`);
         const fetchedProjects = projectResponse.data;
         setProjects(fetchedProjects);
 
-        // Filter projects based on the service's name
+       
         const filtered = fetchedProjects.filter(project => project.category === fetchedService.serviceName);
         setFilteredProjects(filtered);
 
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
-        setLoading(false);  // Ensure loading is stopped after data is fetched
+        setLoading(false);  
       }
     }
 
     fetchData();
-  }, [id]);  // The effect should depend on `id` changing
+  }, [id]);  
 
   return (
-    <div className="p-4 md:p-customPadding min-h-screen flex flex-col bg-black">
+    <div className="px-2 py-3 md:px-customPadding min-h-screen flex flex-col bg-black">
       {loading ? (
         <Spinner />
       ) : (
