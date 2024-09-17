@@ -29,7 +29,7 @@ const ContactUs = () => {
     "+962", "+963", "+964", "+965", "+966", "+967", "+968", "+971", "+972", "+973",
     "+974", "+975", "+976", "+977", "+992", "+993", "+994", "+995", "+996", "+998",
     "+670", "+676", "+677", "+678", "+679", "+680", "+681", "+682", "+683", "+685",
-    "+686", "+687", "+688", "+689", "+850", "+852", "+853", "+855", "+856"
+    "+686", "+687", "+688", "+689"
   ];
 
   const handleSubmit = async (e) => {
@@ -85,12 +85,12 @@ const ContactUs = () => {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 text-gray-200"
+                    className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 bg-gray-800 text-gray-200"
                     value={clientName}
                     onChange={(e) => setClientName(e.target.value)}
                     required
                   />
-                  <div className="flex items-center border overflow-hidden border-gray-600 rounded-lg focus-within:ring-2 focus-within:ring-blue-500 bg-gray-900">
+                  <div className="flex items-center border overflow-hidden border-gray-600 rounded-lg focus-within:ring-2 focus-within:ring-rose-500 bg-gray-900">
                     <select
                       className="w-20 md:w-24 h-full px-2 bg-gray-800 border-gray-600 text-gray-500 focus:outline-none"
                       value={countryCode}
@@ -117,7 +117,7 @@ const ContactUs = () => {
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 text-gray-200"
+                    className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 bg-gray-800 text-gray-200"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -125,7 +125,7 @@ const ContactUs = () => {
                 </div>
                 <textarea
                   placeholder="Your Message"
-                  className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 text-gray-200"
+                  className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 bg-gray-800 text-gray-200"
                   rows="5"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -133,7 +133,7 @@ const ContactUs = () => {
                 ></textarea>
                 <button
                   type="submit"
-                  className="w-full py-3 px-4 bg-rose-500 text-white rounded-lg hover:bg-gradient-to-r hover:from-rose-500 hover:via-rose-400 hover:to-rose-300 focus:outline-none focus:ring-4 focus:ring-rose-500"
+                  className="w-full py-3 px-4 bg-rose-500 text-white rounded-lg hover:bg-gradient-to-r hover:from-rose-500 hover:via-rose-400 hover:to-rose-300 focus:outline-none "
                 >
                   {loading ? 'Sending...' : 'Send Message'}
                 </button>
