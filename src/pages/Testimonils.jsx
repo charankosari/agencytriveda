@@ -33,7 +33,7 @@ export default function Testimonials() {
             <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8'>
                 Hear from Our Clients
             </h1>
-            <section className="bg-light rounded-md border border-borderColor border-opacity-35">
+            <section className="bg-light rounded-md border border-borderColor border-opacity-35 font-inter">
                 <div className="w-full px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
                     {reviews.length > 0 && (
                         <figure className="max-w-screen-md mx-auto">
@@ -49,7 +49,7 @@ export default function Testimonials() {
                                 />
                             </svg>
                             <blockquote>
-                                <p className="text-2xl font-medium text-gray-900 dark:text-white">
+                                <p className="text-lg md:text-lg lg:text-2xl font-medium text-gray-900 dark:text-white">
                                     {reviews[currentReview].feedback}
                                 </p>
                             </blockquote>

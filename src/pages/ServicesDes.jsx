@@ -62,13 +62,13 @@ export default function ServicesDes() {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="container mx-auto px-6 py-12">
+        <div className="container mx-auto px-2 py-4">
           {service ? (
             <>
-              <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-textPrimary">
+              <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-textPrimary font-inter ">
                 {service.serviceName}
               </h1>
-              <p className="mb-8 text-white text-opacity-80">
+              <p className="mb-8 text-white text-opacity-80 font-body">
                 {service.serviceDescription}
               </p>
 
@@ -90,7 +90,7 @@ export default function ServicesDes() {
                       </p>
                       <div className="mt-auto flex justify-start">
                         <button
-                          className="px-4 py-2 md:px-6 md:py-3 bg-rose-500 rounded-full text-white text-xs md:text-md font-semibold transition duration-300 ease-in-out transform hover:scale-105"
+                          className="px-4 py-2 md:px-6 md:py-3 bg-textPrimary rounded-full text-white text-xs md:text-md font-semibold transition duration-300 ease-in-out transform hover:scale-105"
                           onClick={() => handleDemoClick(project.demo)}
                         >
                           Demo

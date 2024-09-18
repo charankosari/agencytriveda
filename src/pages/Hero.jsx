@@ -16,7 +16,7 @@ export default function Hero() {
                     <h2 className="text-gray-300 font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
                         Crafting Custom Solutions from Vision to Victory
                     </h2>
-                    <p className="text-gray-300 text-sm sm:text-lg md:text-xl lg:text-xl max-w-lg leading-relaxed">
+                    <p className="text-gray-300 text-sm sm:text-lg md:text-xl lg:text-xl max-w-lg leading-relaxed font-inter">
                         Triveda turns your vision into reality with custom solutions that drive success and innovation.
                     </p>
                    </div>
