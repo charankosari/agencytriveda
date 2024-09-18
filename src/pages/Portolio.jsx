@@ -40,9 +40,9 @@ export default function Portfolio() {
   };
 
   // Filter logic based on selected category
-  const filteredProjects = selectedCategory === "All" 
-    ? projects 
-    : projects.filter((project) => project.category.trim() === selectedCategory); 
+  const filteredProjects = selectedCategory === "All"
+    ? projects
+    : projects.filter((project) => project.category.trim() === selectedCategory);
   if (isLoading) {
     return <Spinner />;
   }
@@ -59,32 +59,32 @@ export default function Portfolio() {
 
         {/* Filter Options */}
         <div className="flex flex-wrap justify-center mb-8">
-  <button
-    className={`px-4 py-2 m-2 ${selectedCategory === "All" ? "bg-rose-500" : "bg-gray-700"} rounded-full text-white`}
-    onClick={() => setSelectedCategory("All")}
-  >
-    All
-  </button>
-  <button
-    className={`px-4 py-2 m-2 ${selectedCategory === "Web Development" ? "bg-rose-500" : "bg-gray-700"} rounded-full text-white`}
-    onClick={() => setSelectedCategory("Web Development")}
-  >
-    Web Development
-  </button>
-  <button
-    className={`px-4 py-2 m-2 ${selectedCategory === "App development" ? "bg-rose-500" : "bg-gray-700"} rounded-full text-white`}
-    onClick={() => setSelectedCategory("App development")}
-  >
-    App Development
-  </button>
-</div>
+          <button
+            className={`px-4 py-2 m-2 ${selectedCategory === "All" ? "bg-rose-500" : "bg-light border border-borderColor border-opacity-35 "} rounded-full text-white`}
+            onClick={() => setSelectedCategory("All")}
+          >
+            All
+          </button>
+          <button
+            className={`px-4 py-2 m-2 ${selectedCategory === "Web Development" ? "bg-rose-500" : "bg-light border border-borderColor border-opacity-35 "} rounded-full text-white`}
+            onClick={() => setSelectedCategory("Web Development")}
+          >
+            Web Development
+          </button>
+          <button
+            className={`px-4 py-2 m-2 ${selectedCategory === "App development" ? "bg-rose-500" : "bg-light border border-borderColor border-opacity-35 "} rounded-full text-white`}
+            onClick={() => setSelectedCategory("App development")}
+          >
+            App Development
+          </button>
+        </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-light cursor-pointer text-gray-100 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col justify-between border-1px"
+              className="bg-light cursor-pointer text-gray-100 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col justify-between  border border-borderColor border-opacity-35"
               style={{ minHeight: '300px' }}
             >
               <img
@@ -104,7 +104,7 @@ export default function Portfolio() {
 
               <div className="p-4 sm:p-6 flex justify-between items-center">
                 <button
-                  className=" px-2 py-2 md:px-6 md:py-3 border-[1px] border-rose-300 border-opacity-65 rounded-full text-white text-xs md:text-md  "
+                  className=" px-2 py-2 md:px-6 md:py-3 border border-borderColor border-opacity-65 rounded-full text-white text-xs md:text-md  "
                 >
                   {project.category}
                 </button>
@@ -112,7 +112,7 @@ export default function Portfolio() {
                   className="px-2 py-2 md:px-6 md:py-3 bg-rose-500 rounded-full text-white text-xs md:text-md  font-semibold transition duration-300 ease-in-out transform hover:scale-105"
                   onClick={() => handleDemoClick(project.demo)}
                 >
-                   Demo
+                  Demo
                 </button>
               </div>
             </div>

@@ -20,10 +20,10 @@ export default function Hero() {
                     </p>
                     <div className="flex mt-6 space-x-4">
                         <Link to='/portfolio'>
-                            <Button label="See Our Work" className="hover:bg-opacity-80 border-borderColor transition ease-in-out duration-300" />
+                            <Button label="See Our Work" />
                         </Link>
                         <Link to='/contact'>
-                            <Button label="Contact Us" className="hover:bg-opacity-80 transition ease-in-out duration-300" />
+                            <Button label="Contact Us"  />
                         </Link>
                     </div>
                 </div>

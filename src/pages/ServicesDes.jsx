@@ -66,7 +66,7 @@ export default function ServicesDes() {
               <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-textPrimary">
                 {service.serviceName}
               </h1>
-              <p className="mb-8 text-gray-400">
+              <p className="mb-8 text-white text-opacity-80">
                 {service.serviceDescription}
               </p>
 
@@ -74,7 +74,7 @@ export default function ServicesDes() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
                 {filteredProjects.length > 0 ? (
                   filteredProjects.map((project) => (
-                    <div key={project._id} className="bg-slate-900 shadow-md rounded-lg p-4 flex flex-col">
+                    <div key={project._id} className="bg-light border border-borderColor border-opacity-35  shadow-md rounded-lg p-4 flex flex-col">
                       <img
                         src={project.coverImage}
                         alt={project.projectName}
@@ -83,7 +83,7 @@ export default function ServicesDes() {
                       <h3 className="text-xl font-bold mb-2 text-white">
                         {project.projectName}
                       </h3>
-                      <p className="text-gray-400  overflow-hidden mb-4">
+                      <p className="text-white text-opacity-80 overflow-hidden mb-4">
                         {project.description}
                       </p>
                       <div className="mt-auto flex justify-start">
