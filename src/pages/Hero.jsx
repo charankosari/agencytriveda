@@ -20,7 +20,7 @@ export default function Hero() {
                     </p>
                     <div className="flex mt-6 space-x-4">
                         <Link to='/portfolio'>
-                            <Button label="See Our Work" />
+                            <Button label="See Our Work" bgColor="bg-rose-600" />
                         </Link>
                         <Link to='/contact'>
                             <Button label="Contact Us"  />
