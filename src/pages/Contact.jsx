@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Alert from '../components/Alert';
+import Footer from './Footer';
 
 const ContactUs = () => {
   const [clientName, setClientName] = useState('');
@@ -74,79 +75,82 @@ const ContactUs = () => {
 
 
   return (
+   <>
     <div className='flex items-center flex-col justify-center h-screen bg-black px-4 text-gray-100 font-sora'>
 
-      {alertType && <Alert type={alertType} message={alertMessage}></Alert>}
-      <div className='w-full max-w-3xl p-8 md:p-12 lg:p-16 bg-light border border-borderColor border-opacity-35 rounded-lg shadow-2xl'>
-        <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8'>
-          Contact Us
-        </h1>
-        <div className='flex flex-col lg:flex-row lg:space-x-12'>
-          <div className='lg:w-full'>
-            <h2 className='text-xl font-semibold mb-4'>Get in Touch</h2>
-            <form className='space-y-6' onSubmit={handleSubmit}>
-              <div className='space-y-4'>
-                <input
-                  type='text'
-                  placeholder='Your Name'
-                  className='w-full px-4 py-3 border-borderColor border-opacity-25 rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
-                  value={clientName}
-                  required
-                  onChange={(e) => setClientName(e.target.value)}
-                />
-              <div className="flex items-center border overflow-hidden  border-borderColor border-opacity-25 rounded-lg focus-within:ring-1 focus-within:ring-rose-500 bg-inputColor">
-                    <select
-                      className="w-20 md:w-24 h-full px-2 bg-inputColor  text-gray-500 focus:outline-none"
-                      value={countryCode}
-                      required
-                      onChange={(e) => setCountryCode(e.target.value)}
-                    >
-                      {countryCodes.map((code) => (
-                        <option key={code} value={code}>
-                          {code}
-                        </option>
-                      ))}
-                    </select>
-
-                    <input
-                      type="tel"
-                      pattern="[0-9]{10}"
-                      placeholder="Phone Number"
-                      className="w-full px-4 py-3 focus:outline-none bg-inputColor text-gray-200"
-                      value={phoneNumber}
-                      required
-                      onChange={(e) => setPhoneNumber(e.target.value)}
-                    />
-                  </div>
-
-                <input
-                  type='email'
-                  placeholder='Your Email'
-                  className='w-full px-4 py-3 border border-borderColor border-opacity-25 rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
-                  value={email}
-                  required
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-              <textarea
-                placeholder='Your Message'
-                className='w-full px-4 py-3 border border-borderColor border-opacity-25 rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
-                rows='4'
-                value={message}
+{alertType && <Alert type={alertType} message={alertMessage}></Alert>}
+<div className='w-full max-w-3xl p-8 md:p-12 lg:p-16 bg-light border border-borderColor border-opacity-35 rounded-lg shadow-2xl'>
+  <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8'>
+    Contact Us
+  </h1>
+  <div className='flex flex-col lg:flex-row lg:space-x-12'>
+    <div className='lg:w-full'>
+      <h2 className='text-xl font-semibold mb-4'>Get in Touch</h2>
+      <form className='space-y-6' onSubmit={handleSubmit}>
+        <div className='space-y-4'>
+          <input
+            type='text'
+            placeholder='Your Name'
+            className='w-full px-4 py-3 border-borderColor border-opacity-25 rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
+            value={clientName}
+            required
+            onChange={(e) => setClientName(e.target.value)}
+          />
+        <div className="flex items-center border overflow-hidden  border-borderColor border-opacity-25 rounded-lg focus-within:ring-1 focus-within:ring-rose-500 bg-inputColor">
+              <select
+                className="w-20 md:w-24 h-full px-2 bg-inputColor  text-gray-500 focus:outline-none"
+                value={countryCode}
                 required
-                onChange={(e) => setmessage(e.target.value)}
-              ></textarea>
-              <button
-                type='submit'
-                className='w-full py-3 px-4 bg-rose-500 text-white rounded-lg hover:bg-rose-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-rose-500'
+                onChange={(e) => setCountryCode(e.target.value)}
               >
-                {loading ? 'Send Message' : 'Sending'}
-              </button>
-            </form>
-          </div>
+                {countryCodes.map((code) => (
+                  <option key={code} value={code}>
+                    {code}
+                  </option>
+                ))}
+              </select>
+
+              <input
+                type="tel"
+                pattern="[0-9]{10}"
+                placeholder="Phone Number"
+                className="w-full px-4 py-3 focus:outline-none bg-inputColor text-gray-200"
+                value={phoneNumber}
+                required
+                onChange={(e) => setPhoneNumber(e.target.value)}
+              />
+            </div>
+
+          <input
+            type='email'
+            placeholder='Your Email'
+            className='w-full px-4 py-3 border border-borderColor border-opacity-25 rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
+            value={email}
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
-      </div>
+        <textarea
+          placeholder='Your Message'
+          className='w-full px-4 py-3 border border-borderColor border-opacity-25 rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
+          rows='4'
+          value={message}
+          required
+          onChange={(e) => setmessage(e.target.value)}
+        ></textarea>
+        <button
+          type='submit'
+          className='w-full py-3 px-4 bg-rose-500 text-white rounded-lg hover:bg-rose-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-rose-500'
+        >
+          {loading ? 'Send Message' : 'Sending'}
+        </button>
+      </form>
     </div>
+  </div>
+</div>
+</div>
+<Footer/>
+   </>
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Spinner from '../components/Spinner';
 import { useParams } from 'react-router-dom';
+import Footer from './Footer';
 
 export default function ServicesDes() {
   const [service, setService] = useState(null);
@@ -56,6 +57,7 @@ export default function ServicesDes() {
   }, [id]);
 
   return (
+    <>
     <div className="px-2 py-3 md:px-customPadding min-h-screen flex flex-col bg-black">
       {loading ? (
         <Spinner />
@@ -122,5 +124,7 @@ export default function ServicesDes() {
         </div>
       )}
     </div>
+    <Footer/>
+    </>
   );
 }

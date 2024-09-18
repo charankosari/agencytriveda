@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Spinner from '../components/Spinner';
+import Footer from './Footer'
 
 export default function Portfolio() {
   const [projects, setProjects] = useState([]);
@@ -48,6 +49,7 @@ export default function Portfolio() {
   }
 
   return (
+    <>
     <div className="min-h-screen bg-black text-white font-sora">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl mb-4 text-textPrimary animate-fadeIn">
@@ -135,6 +137,10 @@ export default function Portfolio() {
           </div>
         </div>
       )}
+
+    
     </div>
+    <Footer></Footer>
+    </>
   );
 }
