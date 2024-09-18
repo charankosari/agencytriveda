@@ -1,12 +1,9 @@
 import axios from 'axios';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Testimonials() {
     const [reviews, setReviews] = useState([]);
     const [currentReview, setCurrentReview] = useState(0);
-    const [transition, setTransition] = useState('opacity-0');
-    const [isInView, setIsInView] = useState(false); // To track if the component is in view
-    const testimonialsRef = useRef(null);
 
     // Fetch testimonials from the API
     useEffect(() => {
@@ -22,47 +19,21 @@ export default function Testimonials() {
         getData();
     }, []);
 
-    // Automatic sliding effect with transition
+    // Automatic sliding effect without transition
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setTransition('opacity-0');
-            setTimeout(() => {
-                setCurrentReview((prev) => (prev + 1) % reviews.length);
-                setTransition('opacity-100');
-            }, 500);
+            setCurrentReview((prev) => (prev + 1) % reviews.length);
         }, 3000);
 
         return () => clearInterval(intervalId);
     }, [reviews.length]);
 
-    // Intersection Observer to detect when the component is in view
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsInView(true);
-                }
-            },
-            { threshold: 0.3 } // Adjust this threshold based on when you want the animation to trigger
-        );
-
-        if (testimonialsRef.current) {
-            observer.observe(testimonialsRef.current);
-        }
-
-        return () => {
-            if (testimonialsRef.current) {
-                observer.unobserve(testimonialsRef.current);
-            }
-        };
-    }, []);
-
     return (
-        <div ref={testimonialsRef} className={`md:px-[2rem] mt-12 transition-transform duration-700 ${isInView ? 'animate-fadeInUp' : 'translate-y-10 opacity-0'}`}>
+        <div className="md:px-[2rem] mt-12">
             <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8'>
                 Hear from Our Clients
             </h1>
-            <section className="bg-light rounded-md border border-borderColor border-opacity-35 ">
+            <section className="bg-light rounded-md border border-borderColor border-opacity-35">
                 <div className="w-full px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
                     {reviews.length > 0 && (
                         <figure className="max-w-screen-md mx-auto">
@@ -77,7 +48,7 @@ export default function Testimonials() {
                                     fill="currentColor"
                                 />
                             </svg>
-                            <blockquote className={`transition-opacity duration-500 ${transition}`}>
+                            <blockquote>
                                 <p className="text-2xl font-medium text-gray-900 dark:text-white">
                                     {reviews[currentReview].feedback}
                                 </p>
