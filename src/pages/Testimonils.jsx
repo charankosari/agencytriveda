@@ -1,30 +1,33 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 export default function Testimonials() {
-    const [reviews, setReviews] = useState([]); 
+    const [reviews, setReviews] = useState([]);
     const [currentReview, setCurrentReview] = useState(0);
     const [transition, setTransition] = useState('opacity-0');
+    const [isInView, setIsInView] = useState(false); // To track if the component is in view
+    const testimonialsRef = useRef(null);
 
+    // Fetch testimonials from the API
     useEffect(() => {
         async function getData() {
             try {
                 const apiUrl = import.meta.env.VITE_API_URL;
                 const res = await axios.get(`${apiUrl}/api/website/testimonials/getTestimonials`);
-                setReviews(res.data); 
+                setReviews(res.data);
             } catch (error) {
                 console.log(error);
             }
         }
-
         getData();
     }, []);
 
+    // Automatic sliding effect with transition
     useEffect(() => {
         const intervalId = setInterval(() => {
             setTransition('opacity-0');
             setTimeout(() => {
-                setCurrentReview((prev) => (prev + 1) % reviews.length); 
+                setCurrentReview((prev) => (prev + 1) % reviews.length);
                 setTransition('opacity-100');
             }, 500);
         }, 3000);
@@ -32,14 +35,36 @@ export default function Testimonials() {
         return () => clearInterval(intervalId);
     }, [reviews.length]);
 
+    // Intersection Observer to detect when the component is in view
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsInView(true);
+                }
+            },
+            { threshold: 0.3 } // Adjust this threshold based on when you want the animation to trigger
+        );
+
+        if (testimonialsRef.current) {
+            observer.observe(testimonialsRef.current);
+        }
+
+        return () => {
+            if (testimonialsRef.current) {
+                observer.unobserve(testimonialsRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <div className='md:px-[2rem] mt-12'>
+        <div ref={testimonialsRef} className={`md:px-[2rem] mt-12 transition-transform duration-700 ${isInView ? 'animate-fadeInUp' : 'translate-y-10 opacity-0'}`}>
             <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8'>
                 Hear from Our Clients
             </h1>
             <section className="bg-light rounded-md">
                 <div className="w-full px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
-                    {reviews.length > 0 && ( 
+                    {reviews.length > 0 && (
                         <figure className="max-w-screen-md mx-auto">
                             <svg
                                 className="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
@@ -54,21 +79,21 @@ export default function Testimonials() {
                             </svg>
                             <blockquote className={`transition-opacity duration-500 ${transition}`}>
                                 <p className="text-2xl font-medium text-gray-900 dark:text-white">
-                                    {reviews[currentReview].feedback} {/* Use the fetched feedback */}
+                                    {reviews[currentReview].feedback}
                                 </p>
                             </blockquote>
                             <figcaption className="flex items-center justify-center mt-6 space-x-3">
                                 <img
                                     className="w-6 h-6 rounded-full"
-                                    src={reviews[currentReview].clientProfile} // Use the fetched profile image
+                                    src={reviews[currentReview].clientProfile}
                                     alt="profile picture"
                                 />
                                 <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
                                     <div className="pr-3 font-medium text-gray-900 dark:text-white">
-                                        {reviews[currentReview].clientName} {/* Use the fetched client name */}
+                                        {reviews[currentReview].clientName}
                                     </div>
                                     <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
-                                        {reviews[currentReview].clientCompanyName} {/* Use the fetched company name */}
+                                        {reviews[currentReview].clientCompanyName}
                                     </div>
                                 </div>
                             </figcaption>
