@@ -62,7 +62,7 @@ export default function Testimonials() {
             <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8'>
                 Hear from Our Clients
             </h1>
-            <section className="bg-light rounded-md">
+            <section className="bg-light rounded-md border border-borderColor border-opacity-35 ">
                 <div className="w-full px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
                     {reviews.length > 0 && (
                         <figure className="max-w-screen-md mx-auto">

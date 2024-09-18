@@ -77,7 +77,7 @@ const ContactUs = () => {
     <div className='flex items-center flex-col justify-center h-screen bg-black px-4 text-gray-100 font-sora'>
 
       {alertType && <Alert type={alertType} message={alertMessage}></Alert>}
-      <div className='w-full max-w-3xl p-8 md:p-12 lg:p-16 bg-light border-[1px] border-gray-900 border-opacity-35 rounded-lg shadow-2xl'>
+      <div className='w-full max-w-3xl p-8 md:p-12 lg:p-16 bg-light border border-borderColor border-opacity-35 rounded-lg shadow-2xl'>
         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8'>
           Contact Us
         </h1>
@@ -89,14 +89,14 @@ const ContactUs = () => {
                 <input
                   type='text'
                   placeholder='Your Name'
-                  className='w-full px-4 py-3 border border-borderColor rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
+                  className='w-full px-4 py-3 border-borderColor border-opacity-25 rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
                   value={clientName}
                   required
                   onChange={(e) => setClientName(e.target.value)}
                 />
-              <div className="flex items-center border overflow-hidden  border-borderColor rounded-lg focus-within:ring-1 focus-within:ring-rose-500 bg-inputColor">
+              <div className="flex items-center border overflow-hidden  border-borderColor border-opacity-25 rounded-lg focus-within:ring-1 focus-within:ring-rose-500 bg-inputColor">
                     <select
-                      className="w-20 md:w-24 h-full px-2 bg-inputColor bg-opacity-95   text-gray-500 focus:outline-none"
+                      className="w-20 md:w-24 h-full px-2 bg-inputColor  text-gray-500 focus:outline-none"
                       value={countryCode}
                       required
                       onChange={(e) => setCountryCode(e.target.value)}
@@ -122,7 +122,7 @@ const ContactUs = () => {
                 <input
                   type='email'
                   placeholder='Your Email'
-                  className='w-full px-4 py-3 border border-borderColor rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
+                  className='w-full px-4 py-3 border border-borderColor border-opacity-25 rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
                   value={email}
                   required
                   onChange={(e) => setEmail(e.target.value)}
@@ -130,7 +130,7 @@ const ContactUs = () => {
               </div>
               <textarea
                 placeholder='Your Message'
-                className='w-full px-4 py-3 border border-borderColor rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
+                className='w-full px-4 py-3 border border-borderColor border-opacity-25 rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
                 rows='4'
                 value={message}
                 required

@@ -20,7 +20,7 @@ export default {
         'black': '#000000', 
         'light': ' #060606', 
         'inputColor':"#1A1D21",
-        'borderColor':'#1C1C21',
+        'borderColor':'#505050',
         'background': '#F3F4F6', 
         'textPrimary': '#dc2626', 
         'textSecondary': '#6B7280', 

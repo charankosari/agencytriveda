@@ -85,12 +85,12 @@ const ContactUs = () => {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full px-4 py-3 border-2 border-borderColor rounded-lg focus:outline-none focus:ring-1 focus:ring-rose-500 bg-inputColor text-gray-200"
+                    className="w-full px-4 py-3 border-borderColor border-opacity-25 rounded-lg focus:outline-none focus:ring-1 focus:ring-rose-500 bg-inputColor text-gray-200"
                     value={clientName}
                     onChange={(e) => setClientName(e.target.value)}
                     required
                   />
-                  <div className="flex items-center border overflow-hidden  border-borderColor rounded-lg focus-within:ring-1 focus-within:ring-rose-500 bg-inputColor">
+                  <div className="flex items-center border overflow-hidden  border-borderColor border-opacity-25 rounded-lg focus-within:ring-1 focus-within:ring-rose-500 bg-inputColor">
                     <select
                       className="w-20 md:w-24 h-full px-2 bg-inputColor bg-opacity-95   text-gray-500 focus:outline-none"
                       value={countryCode}
@@ -117,7 +117,7 @@ const ContactUs = () => {
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="w-full px-4 py-3 border border-borderColor rounded-lg focus:outline-none focus:ring-1 focus:ring-rose-500 bg-inputColor text-gray-200"
+                    className="w-full px-4 py-3 border-borderColor border-opacity-25 rounded-lg focus:outline-none focus:ring-1 focus:ring-rose-500 bg-inputColor text-gray-200"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -125,7 +125,7 @@ const ContactUs = () => {
                 </div>
                 <textarea
                   placeholder="Your Message"
-                  className="w-full px-4 py-3 border border-borderColor rounded-lg focus:outline-none focus:ring-1 focus:ring-rose-500 bg-inputColor text-gray-200"
+                  className="w-full px-4 py-3 border border-borderColor border-opacity-25 rounded-lg focus:outline-none focus:ring-1 focus:ring-rose-500 bg-inputColor text-gray-200"
                   rows="5"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
