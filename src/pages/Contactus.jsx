@@ -73,7 +73,7 @@ const ContactUs = () => {
       {/* Alert Component */}
       {alertType && <Alert type={alertType} message={alertMessage} />}
 
-      <div className="bg-light border-[1px] border-gray-900 border-opacity-35 rounded-xl shadow-lg">
+      <div className="bg-light border-[1px] border-borderColor border-opacity-35 rounded-xl shadow-lg">
         <div className="w-full px-6 py-10 mx-auto">
           <div className="flex flex-col lg:flex-row lg:space-x-16">
             {/* Contact Form */}
@@ -85,7 +85,7 @@ const ContactUs = () => {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full px-4 py-3 border border-borderColor rounded-lg focus:outline-none focus:ring-1 focus:ring-rose-500 bg-inputColor text-gray-200"
+                    className="w-full px-4 py-3 border-2 border-borderColor rounded-lg focus:outline-none focus:ring-1 focus:ring-rose-500 bg-inputColor text-gray-200"
                     value={clientName}
                     onChange={(e) => setClientName(e.target.value)}
                     required

@@ -27,16 +27,16 @@ const FAQSection = () => {
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-100">
         Frequently Asked Questions
       </h1>
-      <section className="bg-[#0C0C0C] rounded-lg shadow-lg border border-[#1C1C21] font-sora">
+      <section className="bg-light rounded-lg shadow-lg border border-borderColor border-opacity-35 font-sora">
         <div className="w-full px-6 py-10 mx-auto space-y-6">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="rounded-lg bg-[#0C0C0C] border border-[#1C1C21] overflow-hidden transition-all duration-500 ease-in-out hover:shadow-md"
+              className="rounded-lg bg-light border border-borderColor  border-opacity-35  overflow-hidden transition-all duration-500 ease-in-out hover:shadow-md"
             >
               <button
                 onClick={() => handleToggle(index)}
-                className="w-full px-6 py-4 text-left text-lg font-semibold text-gray-200 bg-[#0C0C0C] focus:outline-none rounded-lg transition-all duration-300 ease-in-out hover:bg-opacity-80"
+                className="w-full px-6 py-4 text-left text-lg font-semibold text-gray-200 bg-light focus:outline-none rounded-lg transition-all duration-300 ease-in-out hover:bg-opacity-80"
               >
                 <div className="flex justify-between items-center">
                   <span>{faq.question}</span>
