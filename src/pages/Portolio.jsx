@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Spinner from '../components/Spinner';
 import Footer from './Footer'
+import Hook from './Hook';
 
 export default function Portfolio() {
   const [projects, setProjects] = useState([]);
@@ -140,6 +141,7 @@ export default function Portfolio() {
 
     
     </div>
+    <Hook/>
     <Footer></Footer>
     </>
   );

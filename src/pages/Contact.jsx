@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Alert from '../components/Alert';
 import Footer from './Footer';
@@ -32,6 +32,11 @@ const ContactUs = () => {
     "+670", "+676", "+677", "+678", "+679", "+680", "+681", "+682", "+683", "+685",
     "+686", "+687", "+688", "+689"
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
