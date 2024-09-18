@@ -56,12 +56,12 @@ export default function Portfolio() {
         <h1 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl mb-4 text-textPrimary animate-fadeIn">
           Portfolio
         </h1>
-        <p className="text-center mb-8 animate-fadeIn">
+        <p className="text-center font-inter mb-8 animate-fadeIn">
           "At Triveda, we are committed to crafting digital excellence, where our work truly speaks for itself."
         </p>
 
         {/* Filter Options */}
-        <div className="flex flex-wrap justify-center mb-8">
+        <div className="flex flex-wrap justify-center mb-8 font-body">
           <button
             className={`px-4 py-2 m-2 ${selectedCategory === "All" ? "bg-rose-500" : "bg-light border border-borderColor border-opacity-35 "} rounded-full text-white`}
             onClick={() => setSelectedCategory("All")}
@@ -98,7 +98,7 @@ export default function Portfolio() {
               <div className="p-4 sm:p-6 flex-grow">
                 <h2 className="text-left font-bold text-xl sm:text-2xl mb-2">{project.projectName}</h2>
                 <p
-                  className="text-left text-gray-500 overflow-hidden max-h-20 overflow-ellipsis"
+                  className="text-left text-gray-500 font-body overflow-hidden max-h-20 overflow-ellipsis"
                   style={{ WebkitLineClamp: 3, display: '-webkit-box', WebkitBoxOrient: 'vertical' }}
                 >
                   {project.description}
