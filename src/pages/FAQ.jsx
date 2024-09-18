@@ -35,10 +35,10 @@ const FAQSection = () => {
         <div className="w-full px-6 py-12 mx-auto">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="rounded-sm shadow-sm border border-gray-800 overflow-hidden">
+              <div key={index} className="rounded-sm shadow-sm border  overflow-hidden">
                 <button
                   onClick={() => handleToggle(index)}
-                  className="w-full px-6 py-4 text-left text-sm md:text-md lg:text-lg font-medium text-gray-100 bg-gray-900  focus:outline-none rounded-t-lg transition-all duration-300 ease-in-out "
+                  className="w-full px-6 py-4 text-left text-sm md:text-md lg:text-lg font-medium text-gray-100 bg-light  focus:outline-none rounded-t-lg transition-all duration-300 ease-in-out "
                 >
                   <div className="flex justify-between items-center">
                     <span>{faq.question}</span>

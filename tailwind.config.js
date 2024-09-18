@@ -18,7 +18,7 @@ export default {
       },
       colors: {
         'black': '#000000', 
-        'light': '#040303', 
+        'light': '#0C0C0C', 
         'background': '#F3F4F6', 
         'textPrimary': '#dc2626', 
         'textSecondary': '#6B7280', 

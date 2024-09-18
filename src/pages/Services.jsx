@@ -42,7 +42,7 @@ export default function Services() {
           dat.map((item) => (
             <div
               key={item._id} 
-              className='bg-slate-900 shadow-md rounded-lg p-4 flex items-center justify-center text-center h-20 lg:h-[100px] hover:bg-slate-800 cursor-pointer'
+              className='bg-light shadow-md rounded-lg p-4 flex items-center justify-center text-center h-20 lg:h-[100px]  cursor-pointer'
               onClick={() => handleService(item._id)}
             >
               <h2 className='font-bold text-lg font-sora'>{item.serviceName}</h2>

@@ -37,9 +37,9 @@ export default function Testimonials() {
             <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8'>
                 Hear from Our Clients
             </h1>
-            <section className="bg-white dark:bg-gray-900 rounded-md">
+            <section className="bg-light rounded-md">
                 <div className="w-full px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
-                    {reviews.length > 0 && ( // Check if there are reviews to display
+                    {reviews.length > 0 && ( 
                         <figure className="max-w-screen-md mx-auto">
                             <svg
                                 className="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
