@@ -14,18 +14,18 @@ export default function Home() {
 
   return (
     <div className='px-customPaddingMobile bg-black text-white md:px-customPadding'>
-   
-<Hero></Hero>
-    <About />
-    <Clients />
-    <Services />
-    <WorkProof />
-    <Testimonils />
-    <FAQSection />
-    <ContactUs />
-    <Footer />
-  </div>
-  
+
+      <Hero></Hero>
+      <About />
+      <Clients />
+      <Services />
+      <WorkProof />
+      <Testimonils />
+      <FAQSection />
+      <ContactUs />
+      <Footer />
+    </div>
+
 
   );
 }

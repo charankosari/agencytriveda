@@ -13,6 +13,11 @@ const ContactUs = () => {
   const [alertMessage, setAlertMessage] = useState('')
   const [alertType, setAlertType] = useState('')
 
+  const gradientStyle = {
+    backgroundImage: 'linear-gradient(to right, #6C0A0A, #D33D3D)', 
+    color: 'white',
+    textAlign: 'center',
+  };
   const countryCodes = [
     "+1", "+1-767", "+1-809", "+20", "+27", "+30", "+31", "+32", "+33", "+34",
     "+36", "+39", "+40", "+44", "+46", "+47", "+48", "+49", "+51", "+52", "+54",
@@ -66,10 +71,10 @@ const ContactUs = () => {
       setLoading(true);
       console.error('Error submitting contact details:', error);
 
-      // Check if the error response is a validation error (status 400)
+    
       if (error.response && error.response.status === 400) {
         const validationErrors = error.response.data.errors;
-        setAlertMessage(validationErrors.join(' ')); // Combine validation messages into a single string
+        setAlertMessage(validationErrors.join(' ')); 
         setAlertType("error");
       } else {
         setAlertMessage("Oops! Something went wrong. Please try again.");
@@ -144,6 +149,7 @@ const ContactUs = () => {
           onChange={(e) => setmessage(e.target.value)}
         ></textarea>
         <button
+        style={gradientStyle}
           type='submit'
           className='w-full py-3 px-4 bg-rose-500 text-white rounded-lg hover:bg-rose-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-rose-500'
         >

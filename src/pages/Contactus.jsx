@@ -31,7 +31,11 @@ const ContactUs = () => {
     "+670", "+676", "+677", "+678", "+679", "+680", "+681", "+682", "+683", "+685",
     "+686", "+687", "+688", "+689"
   ];
-
+  const gradientStyle = {
+    backgroundImage: 'linear-gradient(to right, #6C0A0A, #D33D3D)', 
+    color: 'white',
+    textAlign: 'center',
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true); 
@@ -132,6 +136,7 @@ const ContactUs = () => {
                   required
                 ></textarea>
                 <button
+                 style={gradientStyle}
                   type="submit"
                   className="w-full py-3 px-4 bg-rose-500 text-white rounded-lg hover:bg-gradient-to-r hover:from-rose-500 hover:via-rose-400 hover:to-rose-300 focus:outline-none "
                 >
