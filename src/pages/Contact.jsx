@@ -89,14 +89,14 @@ const ContactUs = () => {
                 <input
                   type='text'
                   placeholder='Your Name'
-                  className='w-full px-4 py-3 border border-gray-700 rounded-lg bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
+                  className='w-full px-4 py-3 border border-borderColor rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
                   value={clientName}
                   required
                   onChange={(e) => setClientName(e.target.value)}
                 />
                 <div className="flex items-center border overflow-hidden border-gray-600 rounded-lg focus-within:ring-2 focus-within:ring-rose-500 bg-gray-900">
                   <select
-                    className="w-20 md:w-24 h-full py-3 px-2 bg-gray-800 border-gray-600 text-gray-500 focus:outline-none"
+                    className="w-20 md:w-24 h-full py-3 px-2 bg-inputColor border-gray-600 text-gray-500 focus:outline-none"
                     value={countryCode}
                     required
                     onChange={(e) => setCountryCode(e.target.value)}
@@ -111,7 +111,7 @@ const ContactUs = () => {
                     type="tel"
                     pattern="[0-9]{10}"
                     placeholder="Your Phone Number"
-                    className="w-full px-4 py-2 focus:outline-none bg-gray-900 text-gray-200"
+                    className="w-full px-4 py-2 focus:outline-none bg-inputColor text-gray-200"
                     value={phoneNumber}
                     required
                     onChange={(e) => setNumber(e.target.value)}
@@ -121,7 +121,7 @@ const ContactUs = () => {
                 <input
                   type='email'
                   placeholder='Your Email'
-                  className='w-full px-4 py-3 border border-gray-700 rounded-lg bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
+                  className='w-full px-4 py-3 border border-borderColor rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
                   value={email}
                   required
                   onChange={(e) => setEmail(e.target.value)}
@@ -129,7 +129,7 @@ const ContactUs = () => {
               </div>
               <textarea
                 placeholder='Your Message'
-                className='w-full px-4 py-3 border border-gray-700 rounded-lg bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
+                className='w-full px-4 py-3 border border-borderColor rounded-lg bg-inputColor text-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-500'
                 rows='4'
                 value={message}
                 required

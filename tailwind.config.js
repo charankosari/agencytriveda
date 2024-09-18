@@ -18,8 +18,9 @@ export default {
       },
       colors: {
         'black': '#000000', 
-        'light': '#0C0C0C', 
-        'borderColor':'#1C1C21',
+        'light': ' #060606', 
+        'inputColor':"#1A1D21",
+        'borderColor':'#1A1D21',
         'background': '#F3F4F6', 
         'textPrimary': '#dc2626', 
         'textSecondary': '#6B7280', 
