@@ -8,8 +8,8 @@ export default function Hero() {
         <div className="min-h-96 flex items-center justify-center ">
             <div className="flex flex-col md:flex-row items-center justify-center w-full  md:px-8 lg:px-6 py-8 font-sora">
                 {/* Left section: Text content */}
-                <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-12 animate-fadeIn">
-                   <div>
+                <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6 md:space-y-12 animate-fadeIn">
+                   <div className='flex flex-col space-y-2 md:space-y-4'>
                    <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-textPrimary leading-tight">
                         Triveda
                     </h1>
