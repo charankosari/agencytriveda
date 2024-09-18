@@ -51,6 +51,7 @@ const Navbar = () => {
           } transition-transform duration-300 ease-in-out z-50`}
       >
         <div className="flex justify-end p-4">
+     
           <button onClick={toggleSidebar} className="text-white">
             <RemoveIcon />
           </button>
@@ -58,7 +59,7 @@ const Navbar = () => {
         <nav className="flex flex-col p-10 space-y-4">
           {navbarItems &&
             navbarItems.map((item, index) => (
-              <Link key={index} to={`/${item.item.toLowerCase()}`}>
+              <Link key={index} to={item.rp}>
               <div className='flex justify-start items-start p-4 space-x-4 rounded-md  text-gray-400 hover:text-gray-100 '  onClick={toggleSidebar}>
                 <div>
                   <item.icon />
@@ -139,9 +140,18 @@ const contactIcon = ()=>{
 
   )
 }
+
+const homeIcon = ()=>{
+  return (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+</svg>
+  )
+}
 const navbarItems = [
-  { icon: JobsIcon, item: 'Jobs' },
-  { icon: contactIcon, item: 'Contact' },
+  { icon: homeIcon, item: 'Home',rp:"/" },
+  { icon: JobsIcon, item: 'Jobs',rp:"/jobs"  },
+  { icon: contactIcon, item: 'Contact',rp:"/contact"  },
 ];
 
 export default Navbar;
