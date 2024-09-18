@@ -34,6 +34,10 @@ export default {
           '0%': { opacity: 0 },
           '100%': { opacity: 5 },
         },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
         float: {
           '0%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-15px)' },
@@ -54,6 +58,7 @@ export default {
         fadeIn: 'fadeIn 1s ease-out forwards',
         scroll: 'scroll 20s linear infinite',
         float: 'float 5s ease-in-out infinite',
+        fadeInUp: 'fadeInUp 0.7s ease-out forwards',
       },
 
 
