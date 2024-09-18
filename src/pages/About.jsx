@@ -13,7 +13,7 @@ export default function About() {
           setIsInView(true);
         }
       },
-      { threshold: 0.3 } // Adjust threshold based on when you want the animation to trigger
+      { threshold: 0.3 } 
     );
 
     if (aboutRef.current) {
@@ -33,11 +33,11 @@ export default function About() {
       className={`flex flex-col items-center justify-center px-4 md:px-8 lg:px-0 lg:w-full 
                   transition-transform duration-700 ${isInView ? 'animate-fadeInUp' : 'translate-y-10 opacity-0'}`}
     >
-      <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold text-center mt-12 md:mt-20 lg:mt-32 mb-8 text-gray-100'>
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-100 font-sora">
         Discover Who We Are
       </h1>
       <div className='flex flex-col md:flex-row w-full md:space-x-8 space-y-8 md:space-y-0 items-center'>
-        <div className='flex flex-col text-md md:text-sm lg:text-lg items-center md:items-center lg:items-start text-gray-300 font-sora md:w-1/2'>
+        <div className='flex flex-col text-md md:text-sm lg:text-lg items-center md:items-center lg:items-start text-gray-300 font-body md:w-1/2'>
           <p className='text-center md:text-left leading-relaxed mb-4'>
             Triveda is more than an agency; it represents the inception of a grand vision. Founded by Vallabhaneni Lakshmi Suresh Chandra and Kosari Shiva Charan, we are dedicated to delivering exceptional services in web development and app development. Our journey commenced with a shared passion for innovation and an unwavering commitment to excellence.
           </p>

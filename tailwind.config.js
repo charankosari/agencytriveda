@@ -15,6 +15,7 @@ export default {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'], 
         'sora': ['Sora', 'sans-serif'], 
+        'body':   ["Open Sans", 'sans-serif']
       },
       colors: {
         'black': '#000000', 
