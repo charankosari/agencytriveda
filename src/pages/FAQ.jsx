@@ -23,22 +23,22 @@ const FAQSection = () => {
   }, []);
 
   return (
-    <div className=" md:px-8 lg:px-12 mt-12 font-sora">
+    <div className="md:px-8 lg:px-12 mt-12 font-sora">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-100">
         Frequently Asked Questions
       </h1>
-      <section className="bg-light rounded-lg shadow-lg border border-borderColor border-opacity-35 font-sora">
-        <div className="w-full px-6 py-10 mx-auto space-y-6">
+      <section className="bg-light rounded-lg shadow-lg border border-[#1C1C21] border-opacity-35 font-sora">
+        <div className="w-full px-6 py-8 mx-auto space-y-6">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="rounded-lg bg-light border border-borderColor  border-opacity-35  overflow-hidden transition-all duration-500 ease-in-out hover:shadow-md"
+              className="rounded-lg bg-[#1C1C21] border border-[#1C1C21] border-opacity-35 overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg"
             >
               <button
                 onClick={() => handleToggle(index)}
-                className="w-full px-6 py-4 text-left text-lg font-semibold text-gray-200 bg-light focus:outline-none rounded-lg transition-all duration-300 ease-in-out hover:bg-opacity-80"
+                className="w-full px-6 py-4 text-left text-sm md:text-md lg:text-lg font-semibold text-gray-200 bg-light focus:outline-none rounded-lg transition-all duration-300 ease-in-out "
               >
-                <div className="flex justify-between items-center">
+                <div className="flex  justify-between items-center">
                   <span>{faq.question}</span>
                   <span
                     className={`ml-2 transform transition-transform ${
@@ -62,13 +62,15 @@ const FAQSection = () => {
                   </span>
                 </div>
               </button>
-              {openIndex === index && (
+              <div
+                className={`overflow-hidden transition-max-height duration-300 ease-in-out ${
+                  openIndex === index ? 'max-h-screen' : 'max-h-0'
+                }`}
+              >
                 <div className="px-6 py-4 bg-[#1C1C21] border-t border-[#1C1C21]">
-                  <p className="text-gray-300 text-md">
-                    {faq.answer}
-                  </p>
+                  <p className="text-gray-300 text-sm md:text-md lg:text-lg">{faq.answer}</p>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
