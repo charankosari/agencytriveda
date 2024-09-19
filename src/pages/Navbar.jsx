@@ -149,7 +149,7 @@ const homeIcon = ()=>{
   )
 }
 const navbarItems = [
-  { icon: homeIcon, item: 'Home',rp:"/" },
+
   { icon: JobsIcon, item: 'Jobs',rp:"/jobs"  },
   { icon: contactIcon, item: 'Contact',rp:"/contact"  },
 ];

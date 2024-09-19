@@ -38,7 +38,7 @@ export default function Testimonials() {
                     {reviews.length > 0 && (
                         <figure className="max-w-screen-md mx-auto">
                             <svg
-                                className="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
+                                className="h-12 mx-auto mb-3 text-white"
                                 viewBox="0 0 24 27"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ export default function Testimonials() {
                                 />
                             </svg>
                             <blockquote>
-                                <p className="text-lg md:text-lg lg:text-2xl font-medium text-gray-900 dark:text-white">
+                                <p className="text-lg md:text-lg lg:text-2xl font-medium text-white">
                                     {reviews[currentReview].feedback}
                                 </p>
                             </blockquote>

@@ -1,12 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-
-
+import Spinner from '../components/Spinner';
 export default function WorkProof() {
 
   const [projects, setProjects] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false); 
   const [modalMessage, setModalMessage] = useState(""); 
+  const [loading,setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchProjects() {
@@ -14,7 +14,7 @@ export default function WorkProof() {
         const apiUrl = import.meta.env.VITE_API_URL;
         const res = await axios.get(`${apiUrl}/api/website/portfolio/getPortfolioProjects`);
         setProjects(res.data);
-   
+        setLoading(false)
       } catch (error) {
         console.error("Error fetching projects:", error);
       }
@@ -42,8 +42,11 @@ export default function WorkProof() {
       <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8'>
         Explore What We Do.
       </h1>
+      {loading ? (
+        <Spinner/>
+      ):(
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4'>
         {projects.map((project) => (
           <div key={project._id} className='relative group overflow-hidden rounded-lg shadow-md'>
             {/* Image */}
@@ -67,6 +70,8 @@ export default function WorkProof() {
           </div>
         ))}
       </div>
+      )}
+   
 
       {/* Modal */}
       {isModalOpen && (
