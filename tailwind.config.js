@@ -7,7 +7,11 @@ export default {
   theme: {
     extend: {
 
-      
+      screens: {
+        'xl': '1280px',
+        '1.5xl': '1440px',
+        '2xl': '1536px',
+      },
       padding: {
         'customPaddingMobile': '1rem', 
         'customPadding': '5rem', 

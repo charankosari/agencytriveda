@@ -58,7 +58,7 @@ export default function ServicesDes() {
 
   return (
     <>
-    <div className="px-2 py-3 md:px-customPadding min-h-screen flex flex-col bg-black">
+    <div className="px-2 py-3 md:px-customPadding min-h-screen flex flex-col bg-black xl:px-12 1.5xl:px-20 2xl:px-96">
       {loading ? (
         <Spinner />
       ) : (

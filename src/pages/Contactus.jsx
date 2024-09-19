@@ -69,7 +69,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className=' md:px-8 lg:px-12 py-12 font-sora'>
+    <div className=' md:px-8 lg:px-12 py-12 font-sora xl:px-12 1.5xl:px-20 2xl:px-96'>
    
       <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-8 text-gray-100'>
       Contact Us

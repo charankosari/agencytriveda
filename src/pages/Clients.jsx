@@ -32,7 +32,7 @@ const Clients = () => {
   }, []);
 
   return (
-    <div className="bg-black py-4 mt-12">
+    <div className="bg-black py-4 mt-12 xl:px-12 1.5xl:px-20 2xl:px-96">
       <h1 className="font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8 text-white">
         Our Clients
       </h1>

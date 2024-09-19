@@ -13,7 +13,7 @@ import Clients from './Clients';
 export default function Home() {
 
   return (
-    <div className='px-customPaddingMobile bg-black text-white md:px-customPadding'>
+    <div className='px-customPaddingMobile bg-black text-white md:px-customPadding '>
 
       <Hero></Hero>
       <About />

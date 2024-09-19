@@ -4,8 +4,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white border-t border-gray-800 py-16 font-sora">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
+    <footer className="bg-black text-white border-t border-gray-800 py-16 font-sora xl:px-12 1.5xl:px-20 2xl:px-96">
+      <div className="max-w-screen mx-auto px-6  ">
         {/* Call to Action Section */}
         <div className="flex flex-col items-start lg:items-start  lg:text-left mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold opacity-80 mb-4">
