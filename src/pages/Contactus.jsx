@@ -178,6 +178,14 @@ const ContactUs = () => {
                       <path d="M12 5.838a6.163 6.163 0 1 0 0 12.326 6.163 6.163 0 0 0 0-12.326zm0 10.164a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-10.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
                     </svg>
                   </a>
+
+             
+<a href="https://x.com/Triveda_offi" target="_blank" rel="noopener noreferrer">
+  <svg className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+    <path d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"></path>
+  </svg>
+</a>
+
                 </div>
               </p>
 

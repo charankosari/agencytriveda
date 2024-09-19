@@ -53,6 +53,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="border-t border-gray-700 pt-6  text-gray-500 text-sm">
           <p>© {new Date().getFullYear()} Triveda. All rights reserved.</p>
+          
         </div>
       </div>
     </footer>
