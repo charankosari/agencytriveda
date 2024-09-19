@@ -48,8 +48,8 @@ const Clients = () => {
         breakpoints={{
           480: { slidesPerView: 1 }, // for small devices (mobile)
           600: { slidesPerView: 2 }, // for tablets
-          1024: { slidesPerView: 3 }, // for larger screens
-          1440: { slidesPerView: 4 }, // for wide screens
+          1024: { slidesPerView: 2 }, // for larger screens
+          1440: { slidesPerView: 2 }, // for wide screens
         }}
       >
         {clients.length > 0 ? (
