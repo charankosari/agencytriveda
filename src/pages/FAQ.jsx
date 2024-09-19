@@ -23,7 +23,7 @@ const FAQSection = () => {
   }, []);
 
   return (
-    <div className="md:px-8 lg:px-12 mt-12 font-sora xl:px-12 1.5xl:px-20 2xl:px-96">
+    <div className="md:px-8 lg:px-12 mt-12 font-sora xl:px-12 ">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-100">
         Frequently Asked Questions
       </h1>

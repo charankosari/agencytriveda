@@ -17,7 +17,8 @@
     "react-slick": "^0.30.2",
     "recoil": "^0.7.7",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.1.12"
+    "swiper": "^11.1.12",
+    "tailwindcss-fluid-typography": "^1.0.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

@@ -29,7 +29,7 @@ export default function Testimonials() {
     }, [reviews.length]);
 
     return (
-        <div className="md:px-[2rem] mt-12 xl:px-12 1.5xl:px-20 2xl:px-96">
+        <div className="md:px-[2rem] mt-12 xl:px-12 ">
             <h1 className='font-bold text-center font-sora text-xl md:text-2xl lg:text-3xl mb-8'>
                 Hear from Our Clients
             </h1>
