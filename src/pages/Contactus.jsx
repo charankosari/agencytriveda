@@ -57,7 +57,7 @@ const ContactUs = () => {
       setMessage('');
       setCountryCode('+91');
       setPhoneNumber('');
-      setAlertMessage('Message sent successfully!');
+      setAlertMessage('Message sent! We will get back to you shortly.');
       setAlertType('success');
     } catch (error) {
       console.error('Error submitting contact details:', error);
