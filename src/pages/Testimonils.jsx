@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-
+import clientDefault from '../assets/images/clientDefault.jpg'
 export default function Testimonials() {
     const [reviews, setReviews] = useState([]);
     const [currentReview, setCurrentReview] = useState(0);
@@ -12,6 +12,7 @@ export default function Testimonials() {
                 const apiUrl = import.meta.env.VITE_API_URL;
                 const res = await axios.get(`${apiUrl}/api/website/testimonials/getTestimonials`);
                 setReviews(res.data);
+             
             } catch (error) {
                 console.log(error);
             }
@@ -54,16 +55,17 @@ export default function Testimonials() {
                                 </p>
                             </blockquote>
                             <figcaption className="flex items-center justify-center mt-6 space-x-3">
-                                <img
-                                    className="w-6 h-6 rounded-full"
-                                    src={reviews[currentReview].clientProfile}
-                                    alt="profile picture"
-                                />
+                            <img
+  className="w-6 h-6 rounded-full"
+  src={reviews[currentReview].clientProfile ? reviews[currentReview].clientProfile : clientDefault}
+  alt="profile picture"
+/>
+
                                 <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                                    <div className="pr-3 font-medium text-gray-900 dark:text-white">
+                                    <div className="pr-3 font-medium text-white ">
                                         {reviews[currentReview].clientName}
                                     </div>
-                                    <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
+                                    <div className="pl-3 text-sm font-light text-white ">
                                         {reviews[currentReview].clientCompanyName}
                                     </div>
                                 </div>
