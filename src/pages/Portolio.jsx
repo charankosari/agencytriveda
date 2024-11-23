@@ -3,7 +3,7 @@ import axios from "axios";
 import Spinner from "../components/Spinner";
 import Footer from "./Footer";
 import Hook from "./Hook";
-
+import { Helmet } from "react-helmet";
 export default function Portfolio() {
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -58,6 +58,35 @@ export default function Portfolio() {
 
   return (
     <>
+      <Helmet>
+        <title>Portfolio - Triveda Agency</title>
+        <meta
+          name="description"
+          content="Get in touch with Triveda Agency for your branding, marketing, and development needs. We're here to help you succeed."
+        />
+        <meta name="author" content="Triveda Agency" />
+        <meta property="og:title" content="Portfolio - Triveda Agency" />
+        <meta
+          property="og:description"
+          content="Reach out to Triveda Agency to discuss your next big project or for any inquiries."
+        />
+        <meta
+          name="keywords"
+          content="Triveda Agency, branding, marketing, web design, creative agency, business strategy, digital solutions, web development, app development, agency, triveda, trivedagroup, triveda group"
+        />
+        <meta property="og:image" content="/assets/image/logo.png" />
+        <meta
+          property="og:url"
+          content="https://agency.trivedagroup.com/portfolio"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Portfolio - Triveda Agency" />
+        <link
+          rel="canonical"
+          href="https://agency.trivedagroup.com/portfolio"
+        />
+      </Helmet>
       <div className="min-h-screen bg-black text-white font-sora">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl mb-4 text-textPrimary animate-fadeIn">

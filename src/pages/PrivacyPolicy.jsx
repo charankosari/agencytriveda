@@ -1,8 +1,38 @@
 import React from "react";
 import Footer from "./Footer";
+import Helmet from "react-helmet";
 const PrivacyPolicy = () => {
   return (
     <>
+      <Helmet>
+        <title>PrivacyPolicy - Triveda Agency</title>
+        <meta
+          name="description"
+          content="Get in touch with Triveda Agency for your branding, marketing, and development needs. We're here to help you succeed."
+        />
+        <meta name="author" content="Triveda Agency" />
+        <meta property="og:title" content="PrivacyPolicy - Triveda Agency" />
+        <meta
+          property="og:description"
+          content="Reach out to Triveda Agency to discuss your next big project or for any inquiries."
+        />
+        <meta
+          name="keywords"
+          content="Triveda Agency, branding, marketing, web design, creative agency, business strategy, digital solutions, web development, app development, agency, triveda, trivedagroup, triveda group"
+        />
+        <meta property="og:image" content="/assets/image/logo.png" />
+        <meta
+          property="og:url"
+          content="https://agency.trivedagroup.com/privacy-policy"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="PrivacyPolicy - Triveda Agency" />
+        <link
+          rel="canonical"
+          href="https://agency.trivedagroup.com/privacy-policy"
+        />
+      </Helmet>
       <div className="py-12 md:px-8 lg:px-12 font-sora xl:px-12 text-gray-100 bg-black flex items-center flex-col justify-center">
         <div className="w-full max-w-6xl p-8 md:p-12 lg:p-16 bg-light border border-borderColor border-opacity-35 rounded-lg shadow-2xl">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-8">
